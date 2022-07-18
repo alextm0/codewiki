@@ -11,7 +11,7 @@ function Hero() {
       <div className='flex flex-col sm:flex-row items-center justify-evenly'>
 
         {/* Header content container */}
-        <div className='w-full sm:max-w-[500px] xl:max-w-[700px] pl-5 sm:pl-10 md:pl-14 sm:h-screen sm:mt-[-0px] flex flex-col justify-center'>
+        <div className='w-full sm:max-w-[500px] xl:max-w-[700px] pl-5 sm:pl-10 md:pl-14 sm:h-screen sm:mt-[-90px] flex flex-col justify-center'>
           {/* Main header text */}
           <p className='text-[32px] xl:text-[45px] 2xl:text-[48px]      drop-shadow-[0px_4px_4px_rgba(0,0,0,0.30)] leading-[120%] font-righteous'>
             Invata informatica <br /> si atinge-ti scopurile
