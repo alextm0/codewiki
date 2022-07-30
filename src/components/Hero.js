@@ -6,19 +6,18 @@ import Logo from '../assets/logo.png'
 
 function Hero({ sideMenu }) {
   return (
-    <div className='leading-normal tracking-normal text-white'>
+    <div className='leading-normal tracking-normal text-gray-900'>
       <div className="pt-16 md:pl-24">
         <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
           <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-            <p className="uppercase tracking-loose w-full">Cu ce am putea sa te ajutam ? </p>
-            <h1 className="my-4 text-5xl leading-tight font-righteous">
+            <h1 className="my-4 text-5xl leading-tight font-quicksand font-bold text-white">
               Invata informatica si atinge-ti scopurile
             </h1>
-            <p className="leading-normal text-2xl mb-8">
-              Sub-hero message, not too long and not too short. Make it just right!
+            <p className="leading-normal text-xl mb-8 text-gray-500">
+              Sub-hero message, not too long and not too short. <br/> Make it just right!
             </p>
             
-            <a class="font-quicksand mx-auto lg:mx-0 inline-flex font-bold px-8 py-3 my-8 text-sm text-white transition bg-[#EC615B] rounded hover:scale-110 hover:shadow-xl active:bg-indigo-500 focus:outline-none focus:ring" href="#">
+            <a class="font-quicksand mx-auto lg:mx-0 inline-flex font-bold px-8 py-3 my-8 text-sm text-white transition bg-orange-500 rounded hover:scale-110 hover:shadow-xl active:bg-indigo-500 focus:outline-none focus:ring" href="#">
               Incepe aici
               <svg
                 class="w-5 h-5 ml-3"
