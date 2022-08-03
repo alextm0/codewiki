@@ -11,35 +11,31 @@ import { AiOutlineCaretDown } from 'react-icons/ai'
 import { BiCategoryAlt } from 'react-icons/bi'
 
 function Navbar({ sideMenu, toggleSideMenu }) {
-  useEffect(() => {
-
-  }, [])
-
   return (
     <header class="shadow-sm">
       <div class="max-w-screen-xl p-4 mx-auto">
-        <div class="flex items-center justify-between space-x-4 lg:space-x-10">
+        <div class=" flex items-center justify-between space-x-4 lg:space-x-10">
           <div class="flex items-center lg:w-0 lg:flex-1 text-gray-900 font-righteous text-3xl">
             <img src={Logo} alt="logo" className='mr-2' />
             <span class="w-32 h-10 rounded-lg flex justify-center items-center text-white "> CodeWiki </span>
           </div>
 
           <nav class="hidden space-x-8 text-sm font-medium md:flex">
-            <a class="text-gray-500 mt-2 border-b-2 border-transparent hover:text-purple-100 hover:border-purple-100" href="">Articole</a>
-            <a class="text-gray-500 mt-2 border-b-2 border-transparent hover:text-purple-100 hover:border-purple-100" href="">Categorii</a>
-            <a class="text-gray-500 mt-2 border-b-2 border-transparent hover:text-purple-100 hover:border-purple-100" href="">Probleme</a>
+            <a class="text-gray-500 mt-2 border-b-2 border-transparent hover:text-white hover:border-white" href="">Articole</a>
+            <a class="text-gray-500 mt-2 border-b-2 border-transparent hover:text-white hover:border-white" href="">Categorii</a>
+            <a class="text-gray-500 mt-2 border-b-2 border-transparent hover:text-white hover:border-white" href="">Probleme</a>
           </nav>
 
           <div class="items-center justify-end flex-1 hidden space-x-4 sm:flex">
             <a
-              class="px-5 py-2 text-sm font-medium text-gray-600 bg-gray-100 rounded-lg"
+              class="px-5 py-2 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg"
               href=""
             >
               Log in
             </a>
 
             <a
-              class="px-5 py-2 text-sm font-medium text-white bg-purple-900 rounded-lg"
+              class="px-5 py-2 text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 rounded-lg"
               href=""
             >
               Sign up

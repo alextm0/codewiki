@@ -2,8 +2,11 @@ import React, { useState } from 'react'
 
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Content from './components/Content'
+import Courses from './components/Courses'
 import Features from './components/Features'
+import Articles from './components/Articles'
+import Footer from './components/Footer'
+import Contact from './components/Contact'
 
 
 export default function App() {
@@ -19,8 +22,12 @@ export default function App() {
         <Navbar sideMenu={sideMenu} toggleSideMenu={toggleSideMenu} />
         <Hero sideMenu={sideMenu} />
       </div>
-      <Content />
+      <Courses />
       <Features />
+      <Articles />
+      {/* <CallToAction /> */}
+      <Contact />
+      <Footer />
     </div>
   )
 }

@@ -5,7 +5,10 @@ module.exports = {
     extend: {
       fontFamily: {
         righteous: ['Righteous'],
-        quicksand: ['quicksand'],
+        quicksand: ['Quicksand'],
+        dmsans: ['DM Sans'],
+        montserrat: ['montserrat'],
+        rubik: ['Rubik']
       },
       "colors": {
         "purple": {
