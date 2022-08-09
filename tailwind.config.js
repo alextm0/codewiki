@@ -8,7 +8,8 @@ module.exports = {
         quicksand: ['Quicksand'],
         dmsans: ['DM Sans'],
         montserrat: ['montserrat'],
-        rubik: ['Rubik']
+        rubik: ['Rubik'],
+        poppins: ['poppins']
       },
       "colors": {
         "purple": {

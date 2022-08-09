@@ -1,33 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Courses from './components/Courses'
-import Features from './components/Features'
-import Articles from './components/Articles'
-import Footer from './components/Footer'
-import Contact from './components/Contact'
+import AOS from 'aos'
+import "aos/dist/aos.css";
 
+import MainPage from './pages/MainPage'
+import ArticlePage from './pages/ArticlePage'
+
+import { Route, Routes } from 'react-router-dom'
 
 export default function App() {
-  const [sideMenu, setSideMenu] = useState(false);
-
-  function toggleSideMenu() {
-    setSideMenu(prevSideMenu => !prevSideMenu);
-  }
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, [])
 
   return (
-    <div className='bg-white'>
-      <div className='bg-gradient-to-br from-[#102a4a] to-[#342a84]'>
-        <Navbar sideMenu={sideMenu} toggleSideMenu={toggleSideMenu} />
-        <Hero sideMenu={sideMenu} />
-      </div>
-      <Courses />
-      <Features />
-      <Articles />
-      {/* <CallToAction /> */}
-      <Contact />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={ <MainPage /> }/>
+      <Route path="/articles" element={ <ArticlePage /> } />
+    </Routes>
   )
 }

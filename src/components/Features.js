@@ -2,7 +2,7 @@ import React from 'react'
 
 import {ReactComponent as CodeImg1} from '../assets/code_1.svg';
 import {ReactComponent as CodeImg2} from '../assets/code_2.svg';
-import {ReactComponent as CodeImg3} from '../assets/code_3.svg';
+import {ReactComponent as CodeImg3} from '../assets/code_2.svg';
 
 function Features() {
   return (

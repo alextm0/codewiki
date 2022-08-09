@@ -1,53 +1,66 @@
 import React, { useState, useEffect } from 'react'
-
+import { Link } from 'react-router-dom'
 
 import Logo from '../assets/logo.png'
 import Brain from '../assets/brain.png'
 
-import { GiHamburgerMenu } from 'react-icons/gi'
-import { IoMdClose } from 'react-icons/io'
 import { MdOutlineArticle } from 'react-icons/md'
 import { AiOutlineCaretDown } from 'react-icons/ai'
 import { BiCategoryAlt } from 'react-icons/bi'
+import { IoMdArrowDropdown } from 'react-icons/io'
 
 function Navbar({ sideMenu, toggleSideMenu }) {
   return (
-    <header class="shadow-sm">
-      <div class="max-w-screen-xl p-4 mx-auto">
-        <div class=" flex items-center justify-between space-x-4 lg:space-x-10">
-          <div class="flex items-center lg:w-0 lg:flex-1 text-gray-900 font-righteous text-3xl">
-            <img src={Logo} alt="logo" className='mr-2' />
-            <span class="w-32 h-10 rounded-lg flex justify-center items-center text-white "> CodeWiki </span>
-          </div>
+    <header className="">
+      <div className="max-w-screen-xl p-4 mx-auto">
+        <div className=" flex items-center justify-between space-x-4 lg:space-x-10">
+          
+            <div className="flex items-center lg:w-0 lg:flex-1 text-gray-900 font-righteous text-3xl">
+              <Link to="/" className='flex items-center'>
+                <img src={Logo} alt="logo" className='mr-2' />
+                <span className="w-32 h-10 rounded-lg flex justify-center items-center text-white "> CodeWiki </span>
+              </Link>
+            </div>
+          
 
-          <nav class="hidden space-x-8 text-sm font-medium md:flex">
-            <a class="text-gray-500 mt-2 border-b-2 border-transparent hover:text-white hover:border-white" href="">Articole</a>
-            <a class="text-gray-500 mt-2 border-b-2 border-transparent hover:text-white hover:border-white" href="">Categorii</a>
-            <a class="text-gray-500 mt-2 border-b-2 border-transparent hover:text-white hover:border-white" href="">Probleme</a>
+          <nav className="hidden space-x-8 text-sm mt-2 font-medium md:flex">
+            <Link to="/articles" className="text-gray-500 mt-2 border-b-2 border-transparent hover:text-white hover:border-white"> Articole </Link>
+
+            <div className="dropdown dropdown-hover border-b-2 border-transparent hover:text-white hover:border-white">
+              {/* <label tabindex="0" className="m-1">Click</label> */}
+              <button className='p-2 flex items-center gap-1'> Categorii <IoMdArrowDropdown /> </button>
+              <ul tabindex="0" className="dropdown-content mt-2  menu p-2 shadow bg-gray-200 rounded-box w-52">
+                <li><a className='text-gray-700 active:text-gray-200'>Admitere</a></li>
+                <li><a className='text-gray-700 active:text-gray-200'>Bacalaureat</a></li>
+                <li><a className='text-gray-700 active:text-gray-200'>Olimpiada</a></li>
+              </ul>
+            </div>
+
+            <a className="text-gray-500 mt-2 border-b-2 border-transparent hover:text-white hover:border-white" href="">Probleme</a>
           </nav>
 
-          <div class="items-center justify-end flex-1 hidden space-x-4 sm:flex">
+          <div className="items-center justify-end flex-1 hidden space-x-4 sm:flex">
             <a
-              class="px-5 py-2 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg"
+              className="px-5 py-2 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg"
               href=""
             >
               Log in
             </a>
 
             <a
-              class="px-5 py-2 text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 rounded-lg"
+              className="px-5 py-2 text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 rounded-lg"
               href=""
             >
               Sign up
             </a>
           </div>
 
-          <div class="lg:hidden">
-            <button class="p-2 text-gray-600 rounded-lg" type="button" onClick={toggleSideMenu}>
-              <span class="sr-only">Open menu</span>
+          <div className="lg:hidden">
+            <button className="p-2 text-gray-600 rounded-lg" type="button" onClick={toggleSideMenu}>
+              <span className="sr-only">Open menu</span>
               <svg
                 aria-hidden="true"
-                class="w-5 h-5"
+                className="w-5 h-5"
                 fill="none"
                 stroke="currentColor"
                 viewbox="0 0 24 24"
@@ -65,7 +78,7 @@ function Navbar({ sideMenu, toggleSideMenu }) {
         </div>
       </div>
 
-      <div className={sideMenu ? 'md:hidden fixed left-[-100%] top-0' : 'md:hidden w-[75%] fixed left-0 top-[90px] h-screen mt-[-90px] bg-[#f8f7f7] ease-in-out duration-500'}>
+      {/* <div className={sideMenu ? 'md:hidden fixed left-[-100%] top-0' : 'md:hidden w-[75%] fixed left-0 top-[90px] h-screen mt-[-90px] bg-[#f8f7f7] ease-in-out duration-500'}>
         <div className='pt-[136px]'>
           <div className='flex items-center justify-center mr-[20px] gap-2 mb-[100px]'>
             <img className='w-[60px] h-[60px]' src={Logo} alt="logo" />
@@ -101,6 +114,16 @@ function Navbar({ sideMenu, toggleSideMenu }) {
           </div>
 
         </div>
+      </div> */}
+
+      <div className="container mx-auto items-center flex justify-between">
+        <button id="toggle" className="md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+  
       </div>
 
     </header>
