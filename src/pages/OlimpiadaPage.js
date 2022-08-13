@@ -5,7 +5,7 @@ import Articles from '../components/Articles'
 import Footer from '../components/Footer'
 import PageDivider from '../components/PageDivider'
 
-function ArticlePage() {
+function AdmiterePage() {
   return (
     <div className='bg-white font-poppins'>
       <div className='bg-gradient-to-br from-[#102a4a] to-[#342a84] mb-16'>
@@ -18,4 +18,4 @@ function ArticlePage() {
   )
 }
 
-export default ArticlePage
+export default AdmiterePage

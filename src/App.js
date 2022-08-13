@@ -6,10 +6,13 @@ import "aos/dist/aos.css";
 
 import MainPage from './pages/MainPage'
 import ArticlePage from './pages/ArticlePage'
+import AdmiterePage from './pages/AdmiterePage'
+import BacalaureatPage from './pages/BacalaureatPage'
+import OlimpiadaPage from './pages/OlimpiadaPage'
 
 export default function App() {
   useEffect(() => {
-    AOS.init();
+    AOS.init({ once: true });
     AOS.refresh();
   }, [])
 
@@ -17,6 +20,9 @@ export default function App() {
     <Routes>
       <Route path="/" element={ <MainPage /> }/>
       <Route path="/articles" element={ <ArticlePage /> } />
+      <Route path='/admitere' element={ <AdmiterePage /> } />
+      <Route path='/bacalaureat' element={ <BacalaureatPage /> } />
+      <Route path='/olimpiada' element={ <OlimpiadaPage /> } />
     </Routes>
   )
 }
