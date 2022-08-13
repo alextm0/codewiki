@@ -5,17 +5,6 @@
 @tailwind utilities;
 
 @layer components {
-  .inset-x-center {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .inset-y-center {
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
   .placeholder-style::placeholder {
     padding: 5px 12px;
     margin: 5px;

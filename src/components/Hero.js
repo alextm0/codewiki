@@ -1,10 +1,8 @@
 import React from 'react'
 
-import { BsArrowRight } from 'react-icons/bs'
 import HeroImage from '../assets/hero-illustration.png'
-import Logo from '../assets/logo.png'
 
-function Hero({ sideMenu }) {
+function Hero() {
   return (
     <div className='leading-normal tracking-normal text-gray-900'>
       <div className="pt-16 md:pl-24">
@@ -34,10 +32,6 @@ function Hero({ sideMenu }) {
                 />
               </svg>
             </a>
-
-            {/* <button className="mx-auto lg:mx-0 bg-[#EC615B] text-white font-bold rounded-xl my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-              Subscribe
-            </button> */}
           </div>
           <div className="w-full md:w-3/5 py-6 text-center">
             <img className="w-full md:w-3/5 ml-auto mr-auto mb-10 sm:mb-20 z-50" src={HeroImage} />

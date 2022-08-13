@@ -8,15 +8,15 @@ import Articles from '../components/Articles'
 import Footer from '../components/Footer'
 import Contact from '../components/Contact'
 
-function MainPage({ sideMenu, toggleSideMenu }) {
+function MainPage() {
   return (
     <div className='bg-white font-poppins'>
       <div className='bg-gradient-to-br from-[#102a4a] to-[#342a84]'>
-        <Navbar sideMenu={sideMenu} toggleSideMenu={toggleSideMenu} />
-        <Hero sideMenu={sideMenu} />
+        <Navbar />
+        <Hero />
       </div>
       <Courses />
-      {/* <Features /> */}
+      <Features />
       <Articles />
       <Contact />
       <Footer />

@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react'
+import { Route, Routes } from 'react-router-dom'
 
 import AOS from 'aos'
 import "aos/dist/aos.css";
 
 import MainPage from './pages/MainPage'
 import ArticlePage from './pages/ArticlePage'
-
-import { Route, Routes } from 'react-router-dom'
 
 export default function App() {
   useEffect(() => {

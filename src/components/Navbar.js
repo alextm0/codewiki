@@ -1,33 +1,38 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import Logo from '../assets/logo.png'
-import Brain from '../assets/brain.png'
-
-import { MdOutlineArticle } from 'react-icons/md'
 import { AiOutlineCaretDown } from 'react-icons/ai'
-import { BiCategoryAlt } from 'react-icons/bi'
 import { IoMdArrowDropdown } from 'react-icons/io'
 
-function Navbar({ sideMenu, toggleSideMenu }) {
+function Navbar() {
+  const [sidebar, setSidebar] = useState('');
+
+  function toggleSidebar() {
+    setSidebar((prev) => {
+      if (prev == 'show')
+        return '';
+      else
+        return 'show';
+    })
+  }
+
   return (
     <header className="">
-      <div className="max-w-screen-xl p-4 mx-auto">
-        <div className=" flex items-center justify-between space-x-4 lg:space-x-10">
-          
-            <div className="flex items-center lg:w-0 lg:flex-1 text-gray-900 font-righteous text-3xl">
-              <Link to="/" className='flex items-center'>
-                <img src={Logo} alt="logo" className='mr-2' />
-                <span className="w-32 h-10 rounded-lg flex justify-center items-center text-white "> CodeWiki </span>
-              </Link>
-            </div>
-          
+      <div className="max-w-screen-xl items py-4 px-8 mx-auto">
+        <div className="relative flex items-center justify-between space-x-4 lg:space-x-10 ">
+
+          <div className="flex items-center lg:w-0 lg:flex-1 text-gray-900 font-righteous text-3xl">
+            <Link to="/" className='flex items-center'>
+              <img src={Logo} alt="logo" className='mr-2' />
+              <span className="w-32 h-10 rounded-lg flex justify-center items-center text-white "> CodeWiki </span>
+            </Link>
+          </div>
 
           <nav className="hidden space-x-8 text-sm mt-2 font-medium md:flex">
             <Link to="/articles" className="text-gray-500 mt-2 border-b-2 border-transparent hover:text-white hover:border-white"> Articole </Link>
 
             <div className="dropdown dropdown-hover border-b-2 border-transparent hover:text-white hover:border-white">
-              {/* <label tabindex="0" className="m-1">Click</label> */}
               <button className='p-2 flex items-center gap-1'> Categorii <IoMdArrowDropdown /> </button>
               <ul tabindex="0" className="dropdown-content mt-2  menu p-2 shadow bg-gray-200 rounded-box w-52">
                 <li><a className='text-gray-700 active:text-gray-200'>Admitere</a></li>
@@ -55,76 +60,35 @@ function Navbar({ sideMenu, toggleSideMenu }) {
             </a>
           </div>
 
-          <div className="lg:hidden">
-            <button className="p-2 text-gray-600 rounded-lg" type="button" onClick={toggleSideMenu}>
-              <span className="sr-only">Open menu</span>
-              <svg
-                aria-hidden="true"
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewbox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4 6h16M4 12h16M4 18h16"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
+          <div className='md:hidden relative'>
+            <button type="button" onClick={toggleSidebar} className="hs-dropdown-toggle py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold  text-white focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800" data-hs-offcanvas="#hs-offcanvas-example">
+              <AiOutlineCaretDown />
             </button>
-          </div>
-        </div>
-      </div>
 
-      {/* <div className={sideMenu ? 'md:hidden fixed left-[-100%] top-0' : 'md:hidden w-[75%] fixed left-0 top-[90px] h-screen mt-[-90px] bg-[#f8f7f7] ease-in-out duration-500'}>
-        <div className='pt-[136px]'>
-          <div className='flex items-center justify-center mr-[20px] gap-2 mb-[100px]'>
-            <img className='w-[60px] h-[60px]' src={Logo} alt="logo" />
-            <span className='text-[42px] font-righteous text-[#3D4246]'> CodeWiki </span>
-          </div>
-
-          <div className='flex flex-col text-[#3D4246]'>
-            <div className='flex items-center px-5 mx-10  h-[60px]'>
-              <MdOutlineArticle className='w-7 h-7 mr-5' />
-              <span className='text-2xl text-[#3D4246]'> Articole </span>
-              <AiOutlineCaretDown className='ml-auto w-6 h-6 text-[#3D4246]' />
-            </div>
-            <svg className='self-center mt-[10px] mb-[10px] flex justify-center items-center' width="316" height="1" viewBox="0 0 316 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <line y1="0.5" x2="316" y2="0.5" stroke="#3D4246" stroke-opacity="0.15" />
-            </svg>
-          </div>
-          <div className='flex flex-col'>
-            <div className='flex items-center px-5 mx-10  h-[60px]'>
-              <BiCategoryAlt className='w-7 h-7 mr-5 text-[#3D4246]' />
-              <span className='text-2xl text-[#3D4246]'> Categorii </span>
-              <AiOutlineCaretDown className='ml-auto w-6 h-6 text-[#3D4246]' />
-            </div>
-            <svg className='self-center mt-[10px] mb-[10px] flex justify-center items-center' width="316" height="1" viewBox="0 0 316 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <line y1="0.5" x2="316" y2="0.5" stroke="#3D4246" stroke-opacity="0.15" />
-            </svg>
-          </div>
-          <div className='flex flex-col'>
-            <div className='flex items-center px-5 mx-10  h-[60px]'>
-              <img src={Brain} alt="brain" className='w-7 h-7 mr-5 text-bold' />
-              <span className='text-2xl text-[#3D4246]'> Probleme </span>
-              <AiOutlineCaretDown className='ml-auto w-6 h-6 text-[#3D4246]' />
+            <div id="hs-offcanvas-example" className={`${sidebar} hs-offcanvas hs-offcanvas-open:translate-x-0 -translate-x-full fixed top-0 left-0 transition-all duration-300 transform h-full max-w-xs w-full z-[60] bg-white border-r dark:bg-gray-800 dark:border-gray-700" tabindex="-1`}>
+              <div className="flex justify-between items-center py-3 px-4 border-b dark:border-gray-700">
+                <h3 className="font-bold text-gray-800 dark:text-white">
+                  Offcanvas title
+                </h3>
+                <button type="button" onClick={toggleSidebar} className="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-md text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white text-sm dark:text-gray-500 dark:hover:text-gray-400 dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800" data-hs-offcanvas="#hs-offcanvas-example">
+                  <span className="sr-only">Close modal</span>
+                  <svg className="w-3.5 h-3.5" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.258206 1.00652C0.351976 0.912791 0.479126 0.860131 0.611706 0.860131C0.744296 0.860131 0.871447 0.912791 0.965207 1.00652L3.61171 3.65302L6.25822 1.00652C6.30432 0.958771 6.35952 0.920671 6.42052 0.894471C6.48152 0.868271 6.54712 0.854471 6.61352 0.853901C6.67992 0.853321 6.74572 0.865971 6.80722 0.891111C6.86862 0.916251 6.92442 0.953381 6.97142 1.00032C7.01832 1.04727 7.05552 1.1031 7.08062 1.16454C7.10572 1.22599 7.11842 1.29183 7.11782 1.35822C7.11722 1.42461 7.10342 1.49022 7.07722 1.55122C7.05102 1.61222 7.01292 1.6674 6.96522 1.71352L4.31871 4.36002L6.96522 7.00648C7.05632 7.10078 7.10672 7.22708 7.10552 7.35818C7.10442 7.48928 7.05182 7.61468 6.95912 7.70738C6.86642 7.80018 6.74102 7.85268 6.60992 7.85388C6.47882 7.85498 6.35252 7.80458 6.25822 7.71348L3.61171 5.06702L0.965207 7.71348C0.870907 7.80458 0.744606 7.85498 0.613506 7.85388C0.482406 7.85268 0.357007 7.80018 0.264297 7.70738C0.171597 7.61468 0.119017 7.48928 0.117877 7.35818C0.116737 7.22708 0.167126 7.10078 0.258206 7.00648L2.90471 4.36002L0.258206 1.71352C0.164476 1.61976 0.111816 1.4926 0.111816 1.36002C0.111816 1.22744 0.164476 1.10028 0.258206 1.00652Z" fill="currentColor" />
+                  </svg>
+                </button>
+              </div>
+              <div className="p-4">
+                <p className="text-gray-800 dark:text-gray-400">
+                  Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                </p>
+              </div>
             </div>
           </div>
 
         </div>
-      </div> */}
-
-      <div className="container mx-auto items-center flex justify-between">
-        <button id="toggle" className="md:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-
-  
       </div>
+
+
 
     </header>
   )
