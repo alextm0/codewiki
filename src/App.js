@@ -9,6 +9,7 @@ import ArticlePage from './pages/ArticlePage'
 import AdmiterePage from './pages/AdmiterePage'
 import BacalaureatPage from './pages/BacalaureatPage'
 import OlimpiadaPage from './pages/OlimpiadaPage'
+import Post from './pages/Post';
 
 export default function App() {
   useEffect(() => {
@@ -23,6 +24,7 @@ export default function App() {
       <Route path='/admitere' element={ <AdmiterePage /> } />
       <Route path='/bacalaureat' element={ <BacalaureatPage /> } />
       <Route path='/olimpiada' element={ <OlimpiadaPage /> } />
+      <Route path='/blog' element={ <Post /> } />
     </Routes>
   )
 }

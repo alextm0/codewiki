@@ -1,12 +1,16 @@
 import React from 'react'
 
-import HeroImage from '../assets/hero-illustration.png'
+import HeroImage from '../assets/monitor_illustration_2.svg' 
+// import HeroImage from '../assets/computer_illustration.svg'
+// import HeroImage from '../assets/hero-illustration.png'
+
 import { BsArrowRight } from 'react-icons/bs'
 
 import PageDivider from './PageDivider'
 
 function Hero() {
   return (
+    // md:mt-24
     <div className='leading-normal tracking-normal text-gray-900'>
       <div className="pt-16 md:pl-24">
         <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
@@ -25,6 +29,7 @@ function Hero() {
           </div>
           <div className="w-full md:w-3/5 py-6 text-center">
             <img className="w-full md:w-3/5 ml-auto mr-auto mb-10 sm:mb-20 z-50" src={HeroImage} />
+            {/* <img className="w-full md:w-4/5 ml-auto mr-auto mb-10 sm:mb-20 z-50" src={HeroImage} /> */}
           </div>
         </div>
       </div>

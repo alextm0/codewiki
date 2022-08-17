@@ -12,6 +12,11 @@ module.exports = {
         poppins: ['poppins']
       },
       "colors": {
+        custom: {
+          DEFAULT: '#10B981',
+          light: '#D1FAE5'
+        },
+
         "purple": {
           "light": "#6415ff",
           "dark": "#4535aa"
@@ -40,6 +45,7 @@ module.exports = {
           900: '#1a202c',
         },
         "cyan": "#00e0b4",
+        
         "orange": {
           "50": "#ff938d",
           "100": "#ff8983",
@@ -58,6 +64,7 @@ module.exports = {
   plugins: [
     require('tw-elements/dist/plugin'),
     require("daisyui"),
-    require('preline/plugin')
+    require('preline/plugin'),
+    require('tailwind-scrollbar'),
   ]
 }

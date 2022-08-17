@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Articles from '../components/Articles'
 import Footer from '../components/Footer'
 import PageDivider from '../components/PageDivider'
+import Olimpiada from '../components/Olimpiada'
 
 function AdmiterePage() {
   return (
@@ -12,7 +13,7 @@ function AdmiterePage() {
         <Navbar />
         <PageDivider />
       </div>
-      <Articles />
+      <Olimpiada />
       <Footer />
     </div>
   )

@@ -1,15 +1,18 @@
 import React from 'react'
 
-import CodeImg from '../assets/app_dev.svg'
+import CodeImg from '../assets/computer_illustration.svg'
 
 function Features() {
   return (
     <>
-      <div className="md:flex mt-10 md:space-x-10 items-center">
+      <div className="md:flex my-16 md:space-x-10 items-center">
         <div data-aos="fade-right" data-aos-delay="300" className="md:w-7/12 relative">
           {/* <div className="bg-orange-500 w-24 h-24 rounded-full absolute z-0 left-8 top-32 animate-pulse"></div>
           <div className="bg-orange-500 w-5 h-5 rounded-full absolute z-0 left-36 top-32 animate-ping"></div> */}
-          <img className='relative z-50 floating ml-auto' src={CodeImg} alt="codeimg" />
+
+          {/* <img className='relative z-50 floating ml-auto' src={CodeImg} alt="codeimg" /> */}
+          <img className='w-[700px] h-full relative z-50 floating ml-auto mr-auto my-44' src={CodeImg} alt="codeimg" />
+
           {/* <div className="bg-orange-500 w-24 h-24 rounded-full absolute z-0 right-2 bottom-20 animate-pulse"></div>
           <div className="bg-orange-500 w-5 h-5 rounded-full absolute z-0 right-28 bottom-20 animate-ping"></div> */}
         </div>

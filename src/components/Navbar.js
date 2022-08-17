@@ -37,15 +37,18 @@ function Navbar() {
 
 
           <nav className="hidden space-x-8 text-sm mt-2 font-medium md:flex">
-            <Link to="/articles" className="text-gray-500 mt-2 border-b-2 border-transparent hover:text-white hover:border-white"> Articole </Link>
-
+            <div class="relative after:absolute after:bg-gray-200 mt-2 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300">
+              <Link to="/articles" className="text-gray-500 hover:text-white"> Articole </Link>
+            </div>
             {/* Dropdown */}
             <div class="flex items-center justify-center">
               <div class="relative inline-block">
                 {/* <!-- Dropdown toggle button --> */}
-                <button onClick={toggleDropdown} class="inline-flex gap-1 items-center relative z-10 p-2 focus:outline-none border-b-2 border-transparent hover:text-white hover:border-white">
+                <div class="relative after:absolute after:bg-gray-200 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300">
+                <button onClick={toggleDropdown} class="inline-flex gap-1 items-center relative z-10 p-2 focus:outline-none hover:text-white">
                   Categorii <IoMdArrowDropdown />
                 </button>
+                </div>
 
                 {/* <!-- Dropdown menu --> */}
                 {dropdown &&
@@ -68,7 +71,9 @@ function Navbar() {
               </div>
             </div>
 
-            <a className="text-gray-500 mt-2 border-b-2 border-transparent hover:text-white hover:border-white" href="">Probleme</a>
+            <div class="relative after:absolute after:bg-gray-200 mt-2 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300">
+              <Link to="/problems" className="text-gray-500 hover:text-white"> Probleme </Link>
+            </div>
           </nav>
 
           <div className="items-center justify-end flex-1 hidden space-x-4 sm:flex">
