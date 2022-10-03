@@ -1,20 +1,14 @@
 import React from 'react'
 
-import CodeImg from '../assets/computer_illustration.svg'
+// import CodeImg from '../assets/computer_illustration.svg'
+import CodeImg from '../assets/hero_img_11.svg'
 
 function Features() {
   return (
     <>
       <div className="md:flex my-16 md:space-x-10 items-center">
         <div data-aos="fade-right" data-aos-delay="300" className="md:w-7/12 relative">
-          {/* <div className="bg-orange-500 w-24 h-24 rounded-full absolute z-0 left-8 top-32 animate-pulse"></div>
-          <div className="bg-orange-500 w-5 h-5 rounded-full absolute z-0 left-36 top-32 animate-ping"></div> */}
-
-          {/* <img className='relative z-50 floating ml-auto' src={CodeImg} alt="codeimg" /> */}
-          <img className='w-[700px] h-full relative z-50 floating ml-auto mr-auto my-44' src={CodeImg} alt="codeimg" />
-
-          {/* <div className="bg-orange-500 w-24 h-24 rounded-full absolute z-0 right-2 bottom-20 animate-pulse"></div>
-          <div className="bg-orange-500 w-5 h-5 rounded-full absolute z-0 right-28 bottom-20 animate-ping"></div> */}
+          <img className='w-[750px] h-full relative z-50 floating ml-auto mr-auto my-44' src={CodeImg} alt="codeimg" />
         </div>
         <div data-aos="fade-right" data-aos-delay="350" className="sm:max-w-[500px] md:w-3/12 -mt-20 mb-40 sm:mt-20 sm:mb-0 ml-6 md:ml-0 md:mt-0 text-darken">
           <h1 className="text-2xl font-semibold text-darken lg:pr-20">A <span className="text-orange-500">user interface</span> designed for the classNameroom</h1>

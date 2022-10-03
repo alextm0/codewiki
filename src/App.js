@@ -19,12 +19,12 @@ export default function App() {
 
   return (
     <Routes>
-      <Route path="/" element={ <MainPage /> }/>
-      <Route path="/articles" element={ <ArticlePage /> } />
-      <Route path='/admitere' element={ <AdmiterePage /> } />
-      <Route path='/bacalaureat' element={ <BacalaureatPage /> } />
-      <Route path='/olimpiada' element={ <OlimpiadaPage /> } />
-      <Route path='/blog' element={ <Post /> } />
+      <Route path="/" element={<MainPage />} />
+      <Route path="/articles" element={<ArticlePage />} />
+      <Route path='/admitere' element={<AdmiterePage />} />
+      <Route path='/bacalaureat' element={<BacalaureatPage />} />
+      <Route path='/olimpiada' element={<OlimpiadaPage />} />
+      <Route path='/blog' element={<Post />} />
     </Routes>
   )
 }

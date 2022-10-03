@@ -52,7 +52,7 @@ const Contact = () => {
                 {/* :::input */}
                 <input ref={nameRef} type="text" id="name" name="name"
                   placeholder="Name"
-                  className="bg-gray-900 pl-3 py-1 form-input w-full block shadow-sm rounded border-gray-300 text-base placeholder-gray-700 focus:border-orange-500 focus:ring-1 focus:ring-orange-500"
+                  className="bg-gray-900 pl-3 py-1 form-input w-full block shadow-sm rounded border-gray-700 text-base placeholder-gray-700 focus:border-green-400 focus:ring-1 focus:ring-green-400"
                 />
               </div>
               {/* ::Email Input */}
@@ -62,7 +62,7 @@ const Contact = () => {
                 {/* :::input */}
                 <input ref={emailRef} type="email" id="email" name="email"
                   placeholder="Email Address"
-                  className="bg-gray-900 pl-3 py-1 form-input w-full block shadow-sm rounded border-gray-300 text-base placeholder-gray-700 focus:border-green-400 focus:ring-1 focus:ring-green-400"
+                  className="bg-gray-900 pl-3 py-1 form-input w-full block shadow-sm rounded border-gray-700 text-base placeholder-gray-700 focus:border-green-400 focus:ring-1 focus:ring-green-400"
                 />
               </div>
               {/* ::Message Input */}
@@ -72,7 +72,7 @@ const Contact = () => {
                 {/* :::input */}
                 <textarea ref={messageRef} name="message" id="message" cols="30" rows="4"
                   placeholder="How can we help?"
-                  className="bg-gray-900 pl-3 py-1 form-textarea resize-none w-full shadow-sm rounded border-gray-300 placeholder-gray-700 focus:border-green-400 focus:ring-green-400"
+                  className="bg-gray-900 pl-3 py-1 form-textarea resize-none w-full shadow-sm rounded border-gray-700 placeholder-gray-700 focus:border-green-400 focus:ring-green-400"
                 ></textarea>
               </div>
               {/* ::Submit Button */}

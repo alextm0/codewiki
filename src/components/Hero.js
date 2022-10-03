@@ -1,8 +1,9 @@
 import React from 'react'
 
-import HeroImage from '../assets/monitor_illustration_2.svg' 
-// import HeroImage from '../assets/computer_illustration.svg'
-// import HeroImage from '../assets/hero-illustration.png'
+// 3,5,6,7,8
+
+// 3,5,6
+import HeroImage from '../assets/hero_img_5.svg' 
 
 import { BsArrowRight } from 'react-icons/bs'
 
@@ -16,10 +17,10 @@ function Hero() {
         <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
           <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
             <h1 className="my-4 text-5xl leading-tight font-righteous font-medium text-white">
-              Invata informatica si depaseste-ti limitele
+              Invata si pregateste-ti viitorul in informatica
             </h1>
             <p className="leading-normal text-xl mb-8 text-gray-500">
-              Sub-hero message, not too long and not too short. <br/> Make it just right!
+              Dezvolta-ti gandirea algoritmica
             </p>
             
             <a class="font-quicksand mx-auto lg:mx-0 inline-flex font-bold px-8 py-3 my-8 text-sm text-white transition bg-orange-500 hover:bg-orange-600 rounded hover:scale-110 hover:shadow-xl active:bg-indigo-500 focus:outline-none focus:ring" href="#">

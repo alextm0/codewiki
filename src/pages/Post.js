@@ -4,10 +4,159 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import PageDivider from '../components/PageDivider'
 import Bacalaureat from '../components/Bacalaureat'
+import Rating from '../components/Rating'
+
+import '../index.css'
 
 import PostImage from '../assets/PostImage2.png'
+import TableOfContents from "react-table-of-contents"
+import { useState } from 'react'
+import Table from '../components/Table'
 
 function Post() {
+  const Headings = ({ headings, activeId }) => (
+    <ul className='text-gray-600 font-quicksand font-semibold list-disc'>
+      {headings.map((heading) => (
+        <li id='headingLI' key={heading.id} className={heading.id === activeId ? "active" : ""}>
+          <a
+            href={`#${heading.id}`}
+            onClick={(e) => {
+              e.preventDefault();
+              document.querySelector(`#${heading.id}`).scrollIntoView({
+                behavior: "smooth"
+              });
+            }}
+          >
+            {heading.title}
+          </a>
+          {heading.items.length > 0 && (
+            <ul>
+              {heading.items.map((child) => (
+                <li
+                  id='headingLI'
+                  key={child.id}
+                  className={child.id === activeId ? "active" : ""}
+                >
+                  <a
+                    href={`#${child.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.querySelector(`#${child.id}`).scrollIntoView({
+                        behavior: "smooth"
+                      });
+                    }}
+                  >
+                    {child.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  );
+
+  /**
+   * Dynamically generates the table of contents list, using any H2s and H3s it can find in the main text
+   */
+  const useHeadingsData = () => {
+    const [nestedHeadings, setNestedHeadings] = React.useState([]);
+
+    React.useEffect(() => {
+      const headingElements = Array.from(
+        document.querySelectorAll("main h2, main h3")
+      );
+
+      // Created a list of headings, with H3s nested
+      const newNestedHeadings = getNestedHeadings(headingElements);
+      setNestedHeadings(newNestedHeadings);
+    }, []);
+
+    return { nestedHeadings };
+  };
+
+  const getNestedHeadings = (headingElements) => {
+    const nestedHeadings = [];
+
+    headingElements.forEach((heading, index) => {
+      const { innerText: title, id } = heading;
+
+      if (heading.nodeName === "H2") {
+        nestedHeadings.push({ id, title, items: [] });
+      } else if (heading.nodeName === "H3" && nestedHeadings.length > 0) {
+        nestedHeadings[nestedHeadings.length - 1].items.push({
+          id,
+          title
+        });
+      }
+    });
+
+    return nestedHeadings;
+  };
+
+  const useIntersectionObserver = (setActiveId) => {
+    const headingElementsRef = React.useRef({});
+    React.useEffect(() => {
+      const callback = (headings) => {
+        headingElementsRef.current = headings.reduce((map, headingElement) => {
+          map[headingElement.target.id] = headingElement;
+          return map;
+        }, headingElementsRef.current);
+
+        // Get all headings that are currently visible on the page
+        const visibleHeadings = [];
+        Object.keys(headingElementsRef.current).forEach((key) => {
+          const headingElement = headingElementsRef.current[key];
+          if (headingElement.isIntersecting) visibleHeadings.push(headingElement);
+        });
+
+        const getIndexFromId = (id) =>
+          headingElements.findIndex((heading) => heading.id === id);
+
+        // If there is only one visible heading, this is our "active" heading
+        if (visibleHeadings.length === 1) {
+          setActiveId(visibleHeadings[0].target.id);
+          // If there is more than one visible heading,
+          // choose the one that is closest to the top of the page
+        } else if (visibleHeadings.length > 1) {
+          const sortedVisibleHeadings = visibleHeadings.sort(
+            (a, b) => getIndexFromId(a.target.id) > getIndexFromId(b.target.id)
+          );
+
+          setActiveId(sortedVisibleHeadings[0].target.id);
+        }
+      };
+
+      const observer = new IntersectionObserver(callback, { root: document.querySelector("iframe"), rootMargin: "500px" });
+
+      const headingElements = Array.from(document.querySelectorAll("h2, h3"));
+
+      headingElements.forEach((element) => observer.observe(element));
+
+      return () => observer.disconnect();
+    }, [setActiveId]);
+  };
+
+  /**
+   * Renders the table of contents.
+   */
+  const TableOfContents = () => {
+    const [activeId, setActiveId] = React.useState();
+    const { nestedHeadings } = useHeadingsData();
+    useIntersectionObserver(setActiveId);
+
+    return (
+      <nav className='flex flex-col gap-3 w-[220px] min-w-[220px] pl-2 font-medium self-start sticky top-[64px] md:top-[64px] max-h-[800px] overflow-auto' aria-label="Table of contents">
+        <span className='font-bold text-orange-500'> TABLE OF CONTENTS </span>
+        <Headings headings={nestedHeadings} activeId={activeId} />
+      </nav>
+    );
+  };
+
+  const DummyText =
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+
   return (
     <div className='bg-white font-poppins'>
       <div className='bg-gradient-to-br from-[#102a4a] to-[#342a84] mb-16'>
@@ -15,60 +164,67 @@ function Post() {
         <PageDivider />
       </div>
 
-      {/* Content */}
-      <div className="max-w-[1024px] px-6 py-16 mx-auto space-y-12 text-gray-800">
+      <div className='md:flex pb-16 md:pb-0 gap-10 justify-center'>
+        <div className="max-w-full md:max-w-[1024px] px-6 md:py-16 space-y-12 text-gray-800">
 
-        {/* Topics */}
-        <p className='text-orange-500 text-sm font-bold font-quicksand -mb-5'> COMPETITIVE PROGRAMMING, DEVELOPER TIPS, DEVELOPERS </p>
+          <Rating stars={4} />
 
-        <div>
-          {/* Title */}
-          <h1 className='text-gray-800 font-bold text-4xl w-full -mb-3'>
-            Fully Dynamic Trees Supporting Path/Subtree <br /> Aggregates and Lazy Path/Subtree Updates
-          </h1>
-
-          {/* Authors */}
-          <h2 className='text-gray-700 font-medium text-lg mt-10'>
-            Authors: Alexandru Toma
-          </h2>
-        </div>
-
-        {/* Image */}
-        <img className='w-full rounded-3xl h-[500px]' src={PostImage} alt="PostImage" />
-
-        {/* Content */}
-        <main>
-
-          {/* Motivation */}
-          <div className='pb-5'>
-            <h1 className='text-3xl font-semibold mb-6 mt-10'> Motivation </h1>
-            <p className='font-montserrat font-medium text-lg'> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum suscipit impedit voluptates ipsum deleniti, nesciunt enim voluptatum! Perspiciatis pariatur mollitia illum cumque reiciendis, quaerat error asperiores itaque consequuntur. Facere? </p>
-          </div>
-
-          {/* Prerequisites */}
           <div>
-            <h1 className='text-3xl font-semibold mb-6 mt-10'> Prerequisites </h1>
-            <p className='font-montserrat font-medium text-lg'>
-              <ul className='pl-5'>
-                <li className='font-bold'> • Link/Cut Tree </li>
-                <li className='pl-10'> • Blahblahblah </li>
-                <li className='pl-10'> • Blahblahblah </li>
-                <li className='pl-10 mb-3'> • Blahblahblah </li>
+            <h1 className='text-gray-800 font-bold text-4xl w-full -mt-5 -mb-3'>
+              Additional DP Optimizations and Techniques
+            </h1>
 
-                <li className='font-bold'> • Link/Cut Tree </li>
-                <li className='pl-10'> • Blahblahblah </li>
-                <li className='pl-10'> • Blahblahblah </li>
-                <li className='pl-10 mb-3'> • Blahblahblah </li>
-
-                <li className='font-bold'> • Link/Cut Tree </li>
-                <li className='pl-10'> • Blahblahblah </li>
-                <li className='pl-10'> • Blahblahblah </li>
-                <li className='pl-10 mb-3'> • Blahblahblah </li>
-              </ul>
-            </p>
+            <h2 className='text-gray-600 font-medium text-lg mt-5 -mb-3'>
+              Authors: Alexandru Toma
+            </h2>
           </div>
 
-        </main>
+          <div className="divider w-[95%]"></div>
+
+
+          {/* <img className='w-full rounded-3xl h-[500px]' src={PostImage} alt="PostImage" /> */}
+
+          <div className='flex flex-col gap-5 md:hidden'>
+            {/* <div>
+              <a href="#" class="bg-purple-500 ml-2 hover:bg-purple-600 hover:shadow-md text-gray-100 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">Olimpiada</a>
+              <a href="#" class="bg-purple-500 hover:bg-purple-600 hover:shadow-md text-gray-100 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">Clasa XI</a>
+            </div> */}
+            <TableOfContents />
+          </div>
+
+          <div className='max-w-[900px]'>
+            {/* Content */}
+            <main className=''>
+              <h2 className='text-red-500 mb-3 pt-[16px] mt-[-16px] text-3xl font-montserrat font-medium' id="motivation-header">Motivation</h2>
+              <p className='mb-10'>{DummyText}</p>
+
+              <h2 className='text-red-500 mb-3 pt-[16px] mt-[-16px] text-3xl' id="prerequisites-header">Prerequisites</h2>
+              <p className='mb-10'>{DummyText}</p>
+
+              <h2 className='text-red-500 mb-3 pt-[16px] mt-[-16px] text-3xl' id="tutorial-header">Tutorial</h2>
+              <p className='mb-10'>{DummyText}</p>
+
+              <h3 className='text-red-500 mb-3 pt-[16px] mt-[-16px] text-3xl' id="solved-problems-header">Solved Problems</h3>
+              <p>{DummyText}</p>
+              <p className='mb-10'>{DummyText}</p>
+
+              <h2 className='text-red-500 mb-3 pt-[16px] mt-[-16px] text-3xl' id="fourth-header">Practice Problems</h2>
+              <p>{DummyText}</p>
+              <p>{DummyText}</p>
+              <p>{DummyText}</p>
+              <p className='mb-10'>{DummyText}</p>
+
+              <Table />
+            </main>
+          </div>
+        </div>
+        <div className='hidden md:flex md:flex-col gap-5 md:mt-20'>
+          {/* <div>
+            <a href="#" class="bg-purple-500 ml-2 hover:bg-purple-600 hover:shadow-md text-gray-100 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">Olimpiada</a>
+            <a href="#" class="bg-purple-500 hover:bg-purple-600 hover:shadow-md text-gray-100 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">Clasa XI</a>
+          </div> */}
+          <TableOfContents />
+        </div>
       </div>
 
       <Footer />

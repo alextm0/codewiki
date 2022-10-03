@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js', 'node_modules/preline/dist/*.js'],
+  content: ['./src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js', 'node_modules/preline/dist/*.js', 'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       fontFamily: {
@@ -17,10 +17,6 @@ module.exports = {
           light: '#D1FAE5'
         },
 
-        "purple": {
-          "light": "#6415ff",
-          "dark": "#4535aa"
-        },
         "purple": {
           100: '#a273ff',
           200: '#935bff',
@@ -66,5 +62,6 @@ module.exports = {
     require("daisyui"),
     require('preline/plugin'),
     require('tailwind-scrollbar'),
+    require('flowbite/plugin'),
   ]
 }

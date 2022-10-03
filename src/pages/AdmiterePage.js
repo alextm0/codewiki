@@ -6,6 +6,8 @@ import Footer from '../components/Footer'
 import PageDivider from '../components/PageDivider'
 import Admitere from '../components/Admitere'
 
+import TableOfContents from "react-table-of-contents"
+
 function AdmiterePage() {
   return (
     <div className='bg-white font-poppins'>
@@ -13,7 +15,9 @@ function AdmiterePage() {
         <Navbar />
         <PageDivider />
       </div>
+
       <Admitere />
+
       <Footer />
     </div>
   )

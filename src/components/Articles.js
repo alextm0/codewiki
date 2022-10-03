@@ -14,15 +14,21 @@ function Articles() {
   function loadMoreArticles() {
     const articleRow =
       <div className="flex justify-center flex-col md:flex-row gap-10 md:gap-5 pt-10 px-10">
-        <div data-aos="fade-up" data-aos-delay="150">
-          <BlogPost badge="BACALAUREAT" />
-        </div>
-        <div data-aos="fade-up" data-aos-delay="300">
-          <BlogPost badge="ADMITERE" />
-        </div>
-        <div data-aos="fade-up" data-aos-delay="450">
-          <BlogPost badge="OLIMPIADA" />
-        </div>
+        <Link to={'/blog'}>
+          <div data-aos="fade-up" data-aos-delay="150">
+            <BlogPost badge="BACALAUREAT" />
+          </div>
+        </Link>
+        <Link to={'/blog'}>
+          <div data-aos="fade-up" data-aos-delay="300">
+            <BlogPost badge="BACALAUREAT" />
+          </div>
+        </Link>
+        <Link to={'/blog'}>
+          <div data-aos="fade-up" data-aos-delay="450">
+            <BlogPost badge="BACALAUREAT" />
+          </div>
+        </Link>
       </div>
 
     setMoreArticles((prevArticles) => {

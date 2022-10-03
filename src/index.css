@@ -47,3 +47,11 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #d84d47;
 }
+
+li.active > a {
+  color: #460fb3;
+}
+
+li > a:hover {
+  color: #460fb3;
+}
