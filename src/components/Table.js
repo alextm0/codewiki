@@ -22,7 +22,7 @@ function Table() {
         <tbody>
           <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
             <th scope="row" class="py-4 pl-6 mt-[6px] font-medium flex items-center gap-5 text-gray-900 whitespace-nowrap dark:text-white">
-              <Dropdown position="down" />
+              {/* <Dropdown position="down" /> */}
               <a href="https://infoarena.ro/" className='inline-block text-gray-600 relative after:absolute after:bg-gray-400 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300'> Infoarena </a>
             </th>
             <td class="py-4 px-6">
@@ -35,7 +35,7 @@ function Table() {
 
           <tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
             <th scope="row" class="py-4 px-6 mt-[6px] font-medium flex items-center gap-5 text-gray-900 whitespace-nowrap dark:text-white">
-              <Dropdown position="down" />
+              {/* <Dropdown position="down" /> */}
               <a href='https://codeforces.com/' className='inline-block text-gray-600 relative after:absolute after:bg-gray-400 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300'> Codeforces </a>
             </th>
             <td class="py-4 px-6">
@@ -47,7 +47,7 @@ function Table() {
           </tr>
           <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
             <th scope="row" class="py-4 px-6 mt-[6px] font-medium flex items-center gap-5 text-gray-900 whitespace-nowrap dark:text-white">
-              <Dropdown position="down" />
+              {/* <Dropdown position="down" /> */}
               <a href='https://www.codechef.com/' className='inline-block text-gray-600 relative after:absolute after:bg-gray-400 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300'> CodeChef </a>
             </th>
             <td class="py-4 px-6">
@@ -59,7 +59,7 @@ function Table() {
           </tr>
           <tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
             <th scope="row" class="py-4 px-6 mt-[6px] font-medium h-full flex items-center gap-5 text-gray-900 whitespace-nowrap dark:text-white">
-              <Dropdown position="up" />
+              {/* <Dropdown position="up" /> */}
               <a href='https://www.pbinfo.ro/' className='inline-block text-gray-600 relative after:absolute after:bg-gray-400 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300'> Pbinfo </a>
             </th>
             <td class="py-4 px-6">
@@ -71,7 +71,7 @@ function Table() {
           </tr>
           <tr>
             <th scope="row" class="py-4 px-6 mt-[6px] flex items-center gap-5 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-              <Dropdown position="up" />
+              {/* <Dropdown position="up" /> */}
 
               <a href='https://codeforces.com/' className='inline-block text-gray-600 relative after:absolute after:bg-gray-400 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300'> Codeforces </a>
             </th>

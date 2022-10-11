@@ -12,6 +12,7 @@ import PostImage from '../assets/PostImage2.png'
 import TableOfContents from "react-table-of-contents"
 import { useState } from 'react'
 import Table from '../components/Table'
+import { Link } from 'react-router-dom'
 
 function Post() {
   const Headings = ({ headings, activeId }) => (
@@ -166,8 +167,9 @@ function Post() {
 
       <div className='md:flex pb-16 md:pb-0 gap-10 justify-center'>
         <div className="max-w-full md:max-w-[1024px] px-6 md:py-16 space-y-12 text-gray-800">
+          {/* <Link to="/admitere" className=''> {"Home < Admitere < DP"} </Link> */}
 
-          <Rating stars={4} />
+          <Rating stars={0} />
 
           <div>
             <h1 className='text-gray-800 font-bold text-4xl w-full -mt-5 -mb-3'>

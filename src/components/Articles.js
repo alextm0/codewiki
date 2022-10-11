@@ -39,7 +39,11 @@ function Articles() {
   return (
     <div className="mx-auto pt-10 pb-10">
       <div className="text-center mb-5">
-        <h1 className="text-gray-900 font-quicksand font-bold text-4xl">Articole recente</h1>
+        <h1 className="text-gray-900 font-quicksand font-bold text-4xl">
+          <div data-aos="fade-down" data-aos-delay="150">
+            Articole recente
+          </div>
+        </h1>
       </div>
 
       {/* Row 1 */}
@@ -86,7 +90,7 @@ function Articles() {
 
       {/* Row 3*/}
       <div className="flex justify-center flex-col md:flex-row gap-10 md:gap-5 pt-10 px-10">
-      <Link to={'/blog'}>
+        <Link to={'/blog'}>
           <div data-aos="fade-up" data-aos-delay="650">
             <BlogPost badge="BACALAUREAT" />
           </div>

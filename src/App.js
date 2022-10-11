@@ -10,6 +10,7 @@ import AdmiterePage from './pages/AdmiterePage'
 import BacalaureatPage from './pages/BacalaureatPage'
 import OlimpiadaPage from './pages/OlimpiadaPage'
 import Post from './pages/Post';
+import StartLearningPage from './pages/StartLearningPage.js'
 
 export default function App() {
   useEffect(() => {
@@ -25,6 +26,7 @@ export default function App() {
       <Route path='/bacalaureat' element={<BacalaureatPage />} />
       <Route path='/olimpiada' element={<OlimpiadaPage />} />
       <Route path='/blog' element={<Post />} />
+      <Route path='/learn' element={<StartLearningPage />} />
     </Routes>
   )
 }
