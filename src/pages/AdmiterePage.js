@@ -10,16 +10,13 @@ import TableOfContents from "react-table-of-contents"
 
 function AdmiterePage() {
   // TODO: link-uri catre articole
-
   return (
     <div className='bg-white font-poppins'>
       <div className='bg-gradient-to-br from-[#102a4a] to-[#342a84] mb-16'>
         <Navbar />
         <PageDivider />
       </div>
-
       <Admitere />
-
       <Footer />
     </div>
   )

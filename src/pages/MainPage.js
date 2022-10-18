@@ -19,7 +19,6 @@ function MainPage() {
       <Features />
       <Articles />
       <Contact />
-      {/* <Footer /> */}
     </div>
   )
 }
