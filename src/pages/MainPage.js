@@ -19,7 +19,7 @@ function MainPage() {
       <Features />
       <Articles />
       <Contact />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

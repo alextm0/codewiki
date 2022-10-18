@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import Logo from '../assets/logo.png'
-import { AiOutlineCaretDown } from 'react-icons/ai'
 import { IoMdArrowDropdown } from 'react-icons/io'
 import { FiMenu } from 'react-icons/fi'
 
@@ -45,9 +44,9 @@ function Navbar() {
               <div class="relative inline-block">
                 {/* <!-- Dropdown toggle button --> */}
                 <div class="relative after:absolute after:bg-gray-200 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300">
-                <button onClick={toggleDropdown} class="inline-flex gap-1 items-center relative z-10 p-2 focus:outline-none hover:text-white">
-                  Categorii <IoMdArrowDropdown />
-                </button>
+                  <button onClick={toggleDropdown} class="inline-flex gap-1 items-center relative z-10 p-2 focus:outline-none hover:text-white">
+                    Categorii <IoMdArrowDropdown />
+                  </button>
                 </div>
 
                 {/* <!-- Dropdown menu --> */}
@@ -77,19 +76,19 @@ function Navbar() {
           </nav>
 
           <div className="items-center justify-end flex-1 hidden space-x-4 sm:flex">
-            <a
-              className="px-5 py-2 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg"
-              href=""
-            >
-              Log in
-            </a>
 
-            <a
-              className="px-5 py-2 text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 rounded-lg"
-              href=""
-            >
-              Sign up
-            </a>
+            <Link to={"login"}>
+              <button className="px-5 py-2 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg">
+                Log in
+              </button>
+            </Link>
+
+
+            <Link to={'/signup'}>
+              <button className="px-5 py-2 text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 rounded-lg">
+                Sign up
+              </button>
+            </Link>
           </div>
 
           <div className='md:hidden relative'>

@@ -11,6 +11,7 @@ import BacalaureatPage from './pages/BacalaureatPage'
 import OlimpiadaPage from './pages/OlimpiadaPage'
 import Post from './pages/Post';
 import StartLearningPage from './pages/StartLearningPage.js'
+import ErrorPage from './pages/ErrorPage.js'
 
 export default function App() {
   useEffect(() => {
@@ -27,6 +28,9 @@ export default function App() {
       <Route path='/olimpiada' element={<OlimpiadaPage />} />
       <Route path='/blog' element={<Post />} />
       <Route path='/learn' element={<StartLearningPage />} />
+      <Route path='/problems' element={<ErrorPage />} />
+      <Route path='/signup' element={<ErrorPage />} />
+      <Route path='/login' element={<ErrorPage />} />
     </Routes>
   )
 }

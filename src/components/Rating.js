@@ -1,32 +1,44 @@
 import React from 'react'
 import { useState } from 'react';
 
-function Rating({ stars }) {
+function Rating({ stars, onBlogPost }) {
   const [onHover, setOnHover] = useState(false);
 
   let starColor, tooltipMessage, frequency = "Deloc intalnit";
   tooltipMessage = "Nu se intalneste aproape deloc, dar merita sa stii"
 
   if (stars == 1) {
-    starColor = `${onHover ? "text-amber-800" : ""}`
+    if(!onBlogPost)
+      starColor = `${onHover ? "text-amber-800" : ""}`
+    else
+      starColor = "text-amber-800"
 
     tooltipMessage = "Destul de rar intalnit in acesta sectiune";
     frequency = "Foarte rar";
   }
   else if (stars == 2) {
-    starColor = `${onHover ? "text-amber-600" : ""}`
+    if(!onBlogPost)
+      starColor = `${onHover ? "text-amber-600" : ""}`
+    else
+      starColor = "text-amber-600"
 
     tooltipMessage = "Nu este foarte frecvent la aceasta categorie, a aparut doar de cateva ori in ultimii ani";
     frequency = "Nu foarte frecvent";
   }
   else if (stars == 3) {
-    starColor = `${onHover ? "text-green-700" : ""}`
+    if (!onBlogPost)
+      starColor = `${onHover ? "text-green-700" : ""}`
+    else
+      starColor = "text-green-700"
 
     tooltipMessage = "Posibilitatea este foarte mare sa apara la aceasta categorie";
     frequency = "Destul de frecvent";
   }
   else if (stars == 4) {
-    starColor = `${onHover ? "text-green-500" : ""}`
+    if (!onBlogPost)
+      starColor = `${onHover ? "text-green-500" : ""}`
+    else
+      starColor = "text-green-500";
 
     tooltipMessage = "Apare foarte frecvent la aceasta sectiune si merita o atentie sporita";
     frequency = "Foarte frecvent";

@@ -1,18 +1,12 @@
 import React from 'react'
+import '../index.css'
 
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import PageDivider from '../components/PageDivider'
-import Bacalaureat from '../components/Bacalaureat'
 import Rating from '../components/Rating'
-
-import '../index.css'
-
-import PostImage from '../assets/PostImage2.png'
-import TableOfContents from "react-table-of-contents"
-import { useState } from 'react'
-import Table from '../components/Table'
-import { Link } from 'react-router-dom'
+import ProblemSetTable from '../components/ProblemSetTable'
+import ResourcesTable from '../components/ResourcesTable'
 
 function Post() {
   const Headings = ({ headings, activeId }) => (
@@ -156,7 +150,7 @@ function Post() {
   };
 
   const DummyText =
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type spe`ci`men book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
 
   return (
     <div className='bg-white font-poppins'>
@@ -167,24 +161,21 @@ function Post() {
 
       <div className='md:flex pb-16 md:pb-0 gap-10 justify-center'>
         <div className="max-w-full md:max-w-[1024px] px-6 md:py-16 space-y-12 text-gray-800">
-          {/* <Link to="/admitere" className=''> {"Home < Admitere < DP"} </Link> */}
-
-          <Rating stars={0} />
+          <Rating stars={4} onBlogPost={true} />
 
           <div>
+            {/* Title */}
             <h1 className='text-gray-800 font-bold text-4xl w-full -mt-5 -mb-3'>
               Additional DP Optimizations and Techniques
             </h1>
 
+            {/* Authors */}
             <h2 className='text-gray-600 font-medium text-lg mt-5 -mb-3'>
               Authors: Alexandru Toma
             </h2>
           </div>
 
           <div className="divider w-[95%]"></div>
-
-
-          {/* <img className='w-full rounded-3xl h-[500px]' src={PostImage} alt="PostImage" /> */}
 
           <div className='flex flex-col gap-5 md:hidden'>
             {/* <div>
@@ -197,26 +188,49 @@ function Post() {
           <div className='max-w-[900px]'>
             {/* Content */}
             <main className=''>
-              <h2 className='text-red-500 mb-3 pt-[16px] mt-[-16px] text-3xl font-montserrat font-medium' id="motivation-header">Motivation</h2>
+              <h2 className='text-orange-500 mb-3 pt-[16px] mt-[-16px] text-3xl font-montserrat font-medium' id="motivation-header">Motivation</h2>
               <p className='mb-10'>{DummyText}</p>
 
-              <h2 className='text-red-500 mb-3 pt-[16px] mt-[-16px] text-3xl' id="prerequisites-header">Prerequisites</h2>
+              <h1 className='font-bold text-3xl mb-5'> Minimum Spanning Trees </h1>
+
+
+              <div className='mt-5'>
+                <span className='font-bold'> Kruskal's Algorithm </span>
+                finds the MST by greedily adding edges. For all edges
+                not yet in the MST, we can repeatedly add the edge of minimum weight to the MST
+                except when adding edges that would forms a cycle. This can be done by sorting
+                the edges in order of non-decreasing weight. Furthermore, we can easily
+                determine whether adding an edge will create a cycle in constant time using
+
+                <span className='text-[#2563eb] font-medium'> Union Find </span>
+                . Note that since the most expensive operation is sorting
+                the edges, the computational complexity of Kruskal's Algorithm is
+              </div>
+
+              <h2 className='text-orange-500 mb-3 pt-[16px] mt-10 text-3xl' id="prerequisites-header">Prerequisites</h2>
               <p className='mb-10'>{DummyText}</p>
 
-              <h2 className='text-red-500 mb-3 pt-[16px] mt-[-16px] text-3xl' id="tutorial-header">Tutorial</h2>
+              <h2 className='text-orange-500 mb-3 pt-[16px] mt-[-16px] text-3xl' id="tutorial-header">Tutorial</h2>
               <p className='mb-10'>{DummyText}</p>
 
-              <h3 className='text-red-500 mb-3 pt-[16px] mt-[-16px] text-3xl' id="solved-problems-header">Solved Problems</h3>
+              <h2 className='text-orange-500 mb-3 pt-[16px] mt-[-16px] text-3xl' id="solved-problems-header">Solved Problems</h2>
               <p>{DummyText}</p>
               <p className='mb-10'>{DummyText}</p>
 
-              <h2 className='text-red-500 mb-3 pt-[16px] mt-[-16px] text-3xl' id="fourth-header">Practice Problems</h2>
+              <div className='mt-10 mb-10'>
+                <ResourcesTable />
+              </div>
+
+              <h2 className='text-orange-500 mb-3 pt-[16px] mt-[-16px] text-3xl' id="fourth-header">Practice Problems</h2>
               <p>{DummyText}</p>
               <p>{DummyText}</p>
               <p>{DummyText}</p>
               <p className='mb-10'>{DummyText}</p>
 
-              <Table />
+              <div className='mt-10'>
+                <ProblemSetTable />
+              </div>
+
             </main>
           </div>
         </div>
@@ -226,6 +240,8 @@ function Post() {
             <a href="#" class="bg-purple-500 hover:bg-purple-600 hover:shadow-md text-gray-100 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">Clasa XI</a>
           </div> */}
           <TableOfContents />
+
+
         </div>
       </div>
 
