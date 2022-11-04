@@ -37,7 +37,7 @@ function Navbar() {
 
           <nav className="hidden space-x-8 text-sm mt-2 font-medium md:flex">
             <div class="relative after:absolute after:bg-gray-200 mt-2 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300">
-              <Link to="/articles" className="text-gray-500 hover:text-white"> Articole </Link>
+              <Link to="/codewiki/articles" className="text-gray-500 hover:text-white"> Articole </Link>
             </div>{/* Dropdown */}
             <div class="flex items-center justify-center">
               <div class="relative inline-block">
