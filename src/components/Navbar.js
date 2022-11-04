@@ -28,7 +28,7 @@ function Navbar() {
         <div className="relative flex items-center justify-between space-x-4 lg:space-x-10 ">
 
           <div className="flex items-center lg:w-0 lg:flex-1 text-gray-900 font-righteous text-3xl">
-            <Link to="/" className='flex items-center'>
+            <Link to="/codewiki" className='flex items-center'>
               <img src={Logo} alt="logo" className='mr-2' />
               <span className="w-32 h-10 rounded-lg flex justify-center items-center text-white "> CodeWiki </span>
             </Link>
@@ -52,15 +52,15 @@ function Navbar() {
                 {/* <!-- Dropdown menu --> */}
                 {dropdown &&
                   <div class="absolute left-0 z-20 w-48 p-2 mt-2 bg-white rounded-xl shadow-xl">
-                    <Link to={'/admitere'}>
+                    <Link to={'/codewiki/admitere'}>
                       <div class="block px-4 py-3 text-sm rounded-xl text-gray-600 capitalize transition-colors duration-200 transform hover:bg-gray-200 active:bg-purple-500 active:text-gray-200"> Admitere </div>
                     </Link>
 
-                    <Link to={'/bacalaureat'}>
+                    <Link to={'/codewiki/bacalaureat'}>
                       <div class="block px-4 py-3 text-sm rounded-xl text-gray-600 capitalize transition-colors duration-200 transform hover:bg-gray-200 active:bg-purple-500 active:text-gray-200"> Bacalaureat </div>
                     </Link>
 
-                    <Link to={'/olimpiada'}>
+                    <Link to={'/codewiki/olimpiada'}>
                       <div class="block px-4 py-3 text-sm rounded-xl text-gray-600 capitalize transition-colors duration-200 transform hover:bg-gray-200 active:bg-purple-500 active:text-gray-200"> Olimpiada </div>
                     </Link>
                     {/* <a href="#" class="block px-4 py-3 text-sm rounded-xl text-gray-600 capitalize transition-colors duration-200 transform hover:bg-gray-200 active:bg-purple-500 active:text-gray-200"> Bacalaureat </a>
@@ -77,14 +77,14 @@ function Navbar() {
 
           <div className="items-center justify-end flex-1 hidden space-x-4 sm:flex">
 
-            <Link to={"login"}>
+            <Link to={"/codewiki/login"}>
               <button className="px-5 py-2 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg">
                 Log in
               </button>
             </Link>
 
 
-            <Link to={'/signup'}>
+            <Link to={'/codewiki/signup'}>
               <button className="px-5 py-2 text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 rounded-lg">
                 Sign up
               </button>
@@ -99,7 +99,7 @@ function Navbar() {
             <div id="hs-offcanvas-example" className={`${sidebar} hs-offcanvas hs-offcanvas-open:translate-x-0 -translate-x-full fixed top-0 left-0 transition-all duration-300 transform h-full max-w-xs  z-[60] bg-white border-r ${sidebar ? 'shadow-sm' : ''} shadow-white border-r-gray-500 dark:bg-gray-800 dark:border-gray-700" tabindex="-1`}>
               <div class="flex flex-col w-64 h-screen px-4 py-8 bg-gray-800 border-gray-600">
                 {/* Logo */}
-                <Link to={'/'}>
+                <Link to={'/codewiki'}>
                   <h2 class="text-3xl text-white inline-flex items-center gap-2 mb-5 font-righteous "> <img src={Logo} alt="logo" /> CodeWiki</h2>
                 </Link>
 
@@ -120,7 +120,7 @@ function Navbar() {
                         <path d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
 
-                      <Link to={'/articles'}>
+                      <Link to={'/codewiki/articles'}>
                         <span class="mx-4 font-medium">Articole</span>
                       </Link>
                     </a>

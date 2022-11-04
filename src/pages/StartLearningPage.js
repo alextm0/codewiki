@@ -135,7 +135,7 @@ function StartLearningPage() {
                   </li>
                 </ul>
               </div>
-              <Link to={"/admitere"} className="font-quicksand mx-auto lg:mx-0 inline-flex font-bold px-8 py-3 mt-20 my-8 text-sm text-white transition bg-orange-500 hover:bg-orange-600 rounded hover:scale-110 hover:shadow-xl active:bg-indigo-500 focus:outline-none focus:ring" href="#">
+              <Link to={"/codewiki/admitere"} className="font-quicksand mx-auto lg:mx-0 inline-flex font-bold px-8 py-3 mt-20 my-8 text-sm text-white transition bg-orange-500 hover:bg-orange-600 rounded hover:scale-110 hover:shadow-xl active:bg-indigo-500 focus:outline-none focus:ring" href="#">
                 Incepe aici
                 <BsArrowRight className='w-5 h-5 ml-2' />
               </Link>
@@ -255,7 +255,7 @@ function StartLearningPage() {
                   </li>
                 </ul>
               </div>
-              <Link to={"/bacalaureat"} className="font-quicksand mx-auto lg:mx-0 inline-flex font-bold px-8 py-3 mt-20 my-8 text-sm text-white transition bg-orange-500 hover:bg-orange-600 rounded hover:scale-110 hover:shadow-xl active:bg-indigo-500 focus:outline-none focus:ring" href="#">
+              <Link to={"/codewiki/bacalaureat"} className="font-quicksand mx-auto lg:mx-0 inline-flex font-bold px-8 py-3 mt-20 my-8 text-sm text-white transition bg-orange-500 hover:bg-orange-600 rounded hover:scale-110 hover:shadow-xl active:bg-indigo-500 focus:outline-none focus:ring" href="#">
                 Incepe aici
                 <BsArrowRight className='w-5 h-5 ml-2' />
               </Link>
@@ -374,7 +374,7 @@ function StartLearningPage() {
                   </li>
                 </ul>
               </div>
-              <Link to={"/olimpiada"} className="font-quicksand mx-auto lg:mx-0 inline-flex font-bold px-8 py-3 mt-20 my-8 text-sm text-white transition bg-orange-500 hover:bg-orange-600 rounded hover:scale-110 hover:shadow-xl active:bg-indigo-500 focus:outline-none focus:ring" href="#">
+              <Link to={"/codewiki/olimpiada"} className="font-quicksand mx-auto lg:mx-0 inline-flex font-bold px-8 py-3 mt-20 my-8 text-sm text-white transition bg-orange-500 hover:bg-orange-600 rounded hover:scale-110 hover:shadow-xl active:bg-indigo-500 focus:outline-none focus:ring" href="#">
                 Incepe aici
                 <BsArrowRight className='w-5 h-5 ml-2' />
               </Link>

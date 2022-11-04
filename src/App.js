@@ -21,17 +21,16 @@ export default function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<MainPage />} />
       <Route path="/codewiki" element={<MainPage />} />
-      <Route path="/articles" element={<ArticlePage />} />
-      <Route path='/admitere' element={<AdmiterePage />} />
-      <Route path='/bacalaureat' element={<BacalaureatPage />} />
-      <Route path='/olimpiada' element={<OlimpiadaPage />} />
-      <Route path='/blog' element={<Post />} />
-      <Route path='/learn' element={<StartLearningPage />} />
-      <Route path='/problems' element={<ErrorPage />} />
-      <Route path='/signup' element={<ErrorPage />} />
-      <Route path='/login' element={<ErrorPage />} />
+      <Route path="/codewiki/articles" element={<ArticlePage />} />
+      <Route path='/codewiki/admitere' element={<AdmiterePage />} />
+      <Route path='/codewiki/bacalaureat' element={<BacalaureatPage />} />
+      <Route path='/codewiki/olimpiada' element={<OlimpiadaPage />} />
+      <Route path='/codewiki/blog' element={<Post />} />
+      <Route path='/codewiki/learn' element={<StartLearningPage />} />
+      <Route path='/codewiki/problems' element={<ErrorPage />} />
+      <Route path='/codewiki/signup' element={<ErrorPage />} />
+      <Route path='/codewiki/login' element={<ErrorPage />} />
     </Routes>
   )
 }

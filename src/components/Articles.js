@@ -10,7 +10,7 @@ function Articles() {
   function loadMoreArticles() {
     const articleRow =
       <div className="flex justify-center flex-col md:flex-row gap-10 md:gap-5 pt-10 px-10">
-        <Link to={'/blog'}>
+        <Link to={'/codewiki/blog'}>
           <div data-aos="fade-up" data-aos-delay="150">
             <BlogPost badge="BACALAUREAT" />
           </div>
@@ -20,7 +20,7 @@ function Articles() {
             <BlogPost badge="BACALAUREAT" />
           </div>
         </Link>
-        <Link to={'/blog'}>
+        <Link to={'/codewiki/blog'}>
           <div data-aos="fade-up" data-aos-delay="450">
             <BlogPost badge="BACALAUREAT" />
           </div>
@@ -44,19 +44,19 @@ function Articles() {
 
       {/* Row 1 */}
       <div className="flex justify-center flex-col md:flex-row gap-10 md:gap-5 pt-10 px-10">
-        <Link to={'/blog'}>
+        <Link to={'/codewiki/blog'}>
           <div data-aos="fade-up" data-aos-delay="150">
             <BlogPost badge="BACALAUREAT" />
           </div>
         </Link>
 
-        <Link to={'/blog'}>
+        <Link to={'/codewiki/blog'}>
           <div data-aos="fade-up" data-aos-delay="300">
             <BlogPost badge="ADMITERE" />
           </div>
         </Link>
         
-        <Link to={'/blog'}>
+        <Link to={'/codewiki/blog'}>
           <div data-aos="fade-up" data-aos-delay="450">
             <BlogPost badge="OLIMPIADA" />
           </div>
@@ -65,17 +65,17 @@ function Articles() {
 
       {/* Row 2 */}
       <div className="flex justify-center flex-col md:flex-row gap-10 md:gap-5 pt-10 px-10">
-        <Link to={'/blog'}>
+        <Link to={'/codewiki/blog'}>
           <div data-aos="fade-up" data-aos-delay="600">
             <BlogPost badge="OLIMPIADA" />
           </div>
         </Link>
-        <Link to={'/blog'}>
+        <Link to={'/codewiki/blog'}>
           <div data-aos="fade-up" data-aos-delay="750">
             <BlogPost badge="BACALAUREAT" />
           </div>
         </Link>
-        <Link to={'/blog'}>
+        <Link to={'/codewiki/blog'}>
           <div data-aos="fade-up" data-aos-delay="900">
             <BlogPost badge="ADMITERE" />
           </div>
@@ -84,17 +84,17 @@ function Articles() {
 
       {/* Row 3*/}
       <div className="flex justify-center flex-col md:flex-row gap-10 md:gap-5 pt-10 px-10">
-        <Link to={'/blog'}>
+        <Link to={'/codewiki/blog'}>
           <div data-aos="fade-up" data-aos-delay="650">
             <BlogPost badge="BACALAUREAT" />
           </div>
         </Link>
-        <Link to={'/blog'}>
+        <Link to={'/codewiki/blog'}>
           <div data-aos="fade-up" data-aos-delay="800">
             <BlogPost badge="OLIMPIADA" />
           </div>
         </Link>
-        <Link to={'/blog'}>
+        <Link to={'/codewiki/blog'}>
           <div data-aos="fade-up" data-aos-delay="950">
             <BlogPost badge="ADMITERE" />
           </div>

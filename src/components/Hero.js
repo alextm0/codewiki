@@ -23,7 +23,7 @@ function Hero() {
             <p className="leading-normal text-xl mb-8 text-gray-500">
               Dezvolta-ti gandirea algoritmica
             </p>
-            <Link to={"/learn"} className="font-quicksand mx-auto lg:mx-0 inline-flex font-bold px-8 py-3 my-8 text-sm text-white transition bg-orange-500 hover:bg-orange-600 rounded hover:scale-110 hover:shadow-xl active:bg-indigo-500 focus:outline-none focus:ring" href="#">
+            <Link to={"/codewiki/learn"} className="font-quicksand mx-auto lg:mx-0 inline-flex font-bold px-8 py-3 my-8 text-sm text-white transition bg-orange-500 hover:bg-orange-600 rounded hover:scale-110 hover:shadow-xl active:bg-indigo-500 focus:outline-none focus:ring" href="#">
               Incepe aici
               <BsArrowRight className='w-5 h-5 ml-2' />
             </Link>
