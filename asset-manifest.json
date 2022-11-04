@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/codewiki/static/css/main.3e945024.css",
-    "main.js": "/codewiki/static/js/main.5e8ea50e.js",
+    "main.js": "/codewiki/static/js/main.964e1f0b.js",
     "static/media/hero_img_5.svg": "/codewiki/static/media/hero_img_5.9e22993d6356d01a27833a8e6638664f.svg",
     "static/media/fa-solid-900.ttf": "/codewiki/static/media/fa-solid-900.422cfe2813b03d900c10.ttf",
     "static/media/fa-brands-400.ttf": "/codewiki/static/media/fa-brands-400.aff1938a5c48584fa92b.ttf",
@@ -18,10 +18,10 @@
     "index.html": "/codewiki/index.html",
     "static/media/bacalaureat-icon.svg": "/codewiki/static/media/bacalaureat-icon.5dab082b5fbf08baf43bfea266868f71.svg",
     "main.3e945024.css.map": "/codewiki/static/css/main.3e945024.css.map",
-    "main.5e8ea50e.js.map": "/codewiki/static/js/main.5e8ea50e.js.map"
+    "main.964e1f0b.js.map": "/codewiki/static/js/main.964e1f0b.js.map"
   },
   "entrypoints": [
     "static/css/main.3e945024.css",
-    "static/js/main.5e8ea50e.js"
+    "static/js/main.964e1f0b.js"
   ]
 }
