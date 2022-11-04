@@ -146,9 +146,9 @@ function Navbar() {
                           <Link to="/bacalaureat"> <div className='text-gray-700 active:text-gray-200'>Bacalaureat</div> </Link>
                           <Link to="/olimpiada"> <div className='text-gray-700 active:text-gray-200'>Olimpiada</div> </Link> */}
 
-                          <Link to="/admitere">   <li><a className='text-gray-700 active:text-gray-200'>Admitere</a></li> </Link>
-                          <Link to="/bacalaureat">   <li><a className='text-gray-700 active:text-gray-200'>Bacalaureat</a></li> </Link>
-                          <Link to="/olimpiada">   <li><a className='text-gray-700 active:text-gray-200'>Olimpiada</a></li> </Link>
+                          <Link to="/codewiki/admitere">   <li><a className='text-gray-700 active:text-gray-200'>Admitere</a></li> </Link>
+                          <Link to="/codewiki/bacalaureat">   <li><a className='text-gray-700 active:text-gray-200'>Bacalaureat</a></li> </Link>
+                          <Link to="/codewiki/olimpiada">   <li><a className='text-gray-700 active:text-gray-200'>Olimpiada</a></li> </Link>
                         </ul>
                       </div>
                     </a>
