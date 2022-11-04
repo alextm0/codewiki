@@ -1,10 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-
-import BlogPostImg from '../assets/post.png'
-import { AiOutlineArrowRight } from 'react-icons/ai'
-
 import BlogPost from './BlogPost'
 import LoadingCard from './LoadingCard'
 
@@ -59,9 +55,7 @@ function Articles() {
             <BlogPost badge="ADMITERE" />
           </div>
         </Link>
-        {/* <div>
-          <LoadingCard />
-        </div> */}
+        
         <Link to={'/blog'}>
           <div data-aos="fade-up" data-aos-delay="450">
             <BlogPost badge="OLIMPIADA" />

@@ -82,8 +82,6 @@ const Contact = () => {
             </form>
           </div>
 
-
-
           {/* :CONTACT INFOS CONTAINER */}
           <div className="order-2 md:order-3 col-span-full md:col-span-1 py-5 md:py-10 px-6">
             <div className="mx-auto max-w-xl flex flex-col space-y-5">
@@ -94,7 +92,7 @@ const Contact = () => {
               {/* ::Email contact */}
               <a href="#mail" className="inline-flex items-center text-base text-blue-400 font-semibold hover:text-orange-500">
                 <MailIcon className="mr-2 w-5 text-gray-400" />
-                codewiki.com
+                codewiki@gmail.com
               </a>
               {/* ::Address */}
               {/* ::Socials */}

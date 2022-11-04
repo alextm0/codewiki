@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Rating from './Rating'
 import Category from './Category'
 
 function Admitere() {

@@ -22,6 +22,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<MainPage />} />
+      <Route path="/codewiki" element={<MainPage />} />
       <Route path="/articles" element={<ArticlePage />} />
       <Route path='/admitere' element={<AdmiterePage />} />
       <Route path='/bacalaureat' element={<BacalaureatPage />} />

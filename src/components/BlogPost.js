@@ -9,7 +9,6 @@ function BlogPost({ badge }) {
       <img alt="blog photo" src={BlogPostImg} className="max-h-40 w-full object-cover" />
       <div className='pl-4 pt-4 text-sm font-medium'>
         <div className='flex items-center '>
-          
           <div className="text-sm text-gray-600 font-medium">
             <a href="#" className='m-1 rounded text-xs text-orange-500 '> {badge} </a>
             •
@@ -29,7 +28,9 @@ function BlogPost({ badge }) {
         </p>
 
         <div className='flex items-center'>
-          <p className='text-purple-200 mt-5 ml-auto flex items-center gap-1 mr-3 font-medium'> Citeste acum <AiOutlineArrowRight className='mt-[2px]' /> </p>
+          <p className='text-purple-200 mt-5 ml-auto flex items-center gap-1 mr-3 font-medium'>
+            Citeste acum
+            <AiOutlineArrowRight className='mt-[2px]' /> </p>
         </div>
       </div>
     </div>

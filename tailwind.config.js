@@ -9,7 +9,9 @@ module.exports = {
         dmsans: ['DM Sans'],
         montserrat: ['montserrat'],
         rubik: ['Rubik'],
-        poppins: ['poppins']
+        poppins: ['poppins'],
+        maven: ['maven pro'],
+        outfit: ['outfit']
       },
       "colors": {
         custom: {

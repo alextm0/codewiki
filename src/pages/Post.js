@@ -178,24 +178,20 @@ function Post() {
           <div className="divider w-[95%]"></div>
 
           <div className='flex flex-col gap-5 md:hidden'>
-            {/* <div>
-              <a href="#" class="bg-purple-500 ml-2 hover:bg-purple-600 hover:shadow-md text-gray-100 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">Olimpiada</a>
-              <a href="#" class="bg-purple-500 hover:bg-purple-600 hover:shadow-md text-gray-100 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">Clasa XI</a>
-            </div> */}
             <TableOfContents />
           </div>
 
           <div className='max-w-[900px]'>
             {/* Content */}
             <main className=''>
-              <h2 className='text-orange-500 mb-3 pt-[16px] mt-[-16px] text-3xl font-montserrat font-medium' id="motivation-header">Motivation</h2>
+              <h2 className='text-orange-500 mb-3 pt-[16px] mt-[-16px] text-3xl font-poppins font-medium' id="motivation-header">Motivation</h2>
               <p className='mb-10'>{DummyText}</p>
 
-              <h1 className='font-bold text-3xl mb-5'> Minimum Spanning Trees </h1>
+              {/* <h1 className='font-bold text-3xl mb-5'> Minimum Spanning Trees </h1> */}
 
 
-              <div className='mt-5'>
-                <span className='font-bold'> Kruskal's Algorithm </span>
+              <div className='mt-5 font-outfit '>
+                <span className=''> Kruskal's Algorithm </span>
                 finds the MST by greedily adding edges. For all edges
                 not yet in the MST, we can repeatedly add the edge of minimum weight to the MST
                 except when adding edges that would forms a cycle. This can be done by sorting
@@ -207,13 +203,13 @@ function Post() {
                 the edges, the computational complexity of Kruskal's Algorithm is
               </div>
 
-              <h2 className='text-orange-500 mb-3 pt-[16px] mt-10 text-3xl' id="prerequisites-header">Prerequisites</h2>
+              <h2 className='text-orange-500 mb-3 pt-[16px] mt-10 text-3xl font-poppins font-medium' id="prerequisites-header">Prerequisites</h2>
               <p className='mb-10'>{DummyText}</p>
 
-              <h2 className='text-orange-500 mb-3 pt-[16px] mt-[-16px] text-3xl' id="tutorial-header">Tutorial</h2>
+              <h2 className='text-orange-500 mb-3 pt-[16px] mt-10 text-3xl font-poppins font-medium' id="tutorial-header">Tutorial</h2>
               <p className='mb-10'>{DummyText}</p>
 
-              <h2 className='text-orange-500 mb-3 pt-[16px] mt-[-16px] text-3xl' id="solved-problems-header">Solved Problems</h2>
+              <h2 className='text-orange-500 mb-3 pt-[16px] mt-10 text-3xl font-poppins font-medium' id="solved-problems-header">Solved Problems</h2>
               <p>{DummyText}</p>
               <p className='mb-10'>{DummyText}</p>
 
@@ -235,13 +231,7 @@ function Post() {
           </div>
         </div>
         <div className='hidden md:flex md:flex-col gap-5 md:mt-20'>
-          {/* <div>
-            <a href="#" class="bg-purple-500 ml-2 hover:bg-purple-600 hover:shadow-md text-gray-100 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">Olimpiada</a>
-            <a href="#" class="bg-purple-500 hover:bg-purple-600 hover:shadow-md text-gray-100 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 dark:hover:bg-blue-300">Clasa XI</a>
-          </div> */}
           <TableOfContents />
-
-
         </div>
       </div>
 
