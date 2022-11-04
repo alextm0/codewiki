@@ -11,7 +11,14 @@ module.exports = {
         rubik: ['Rubik'],
         poppins: ['poppins'],
         maven: ['maven pro'],
-        outfit: ['outfit']
+        outfit: ['outfit'],
+        ubuntu: ['ubuntu'],
+        source_serif: ['Source Serif Pro'],
+        nunito: ['nunito'],
+        roboto: ['roboto'],
+        noto: ['Noto Sans'],
+        lato: ['lato'],
+        comfortaa: ['comfortaa']
       },
       "colors": {
         custom: {
