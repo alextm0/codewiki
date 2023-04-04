@@ -25,13 +25,12 @@ function StartLearningPage() {
           <div className="grid md:grid-cols-3 gap-14 md:gap-5 mt-32">
             <div data-aos="fade-up" className="bg-white p-6 text-center rounded-xl shadow-xl hover:shadow-2xl hover:shadow-orange-100">
               <div className="bg-orange-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
-                <img src={AdmitereIcon} alt="" className='w-8 h-8'/>
+                <img src={AdmitereIcon} alt="" className='w-8 h-8' />
                 {/* <img src={AdmitereIcon} alt="" className='w-12 h-12'/> */}
               </div>
               <h1 className="font-medium text-xl mb-3 lg:px-14 text-darken">Admitere</h1>
               <p className="px-4 text-gray-500 mb-10">
-                Simple and secure control of your organization's financial and legal transactions. Send customized invoices and contracts
-              </p>
+                Indiferent de nivelul tău de pregătire, vei găsi materiale utile care să te ajute să te pregătești și să-ți maximizezi șansele de a obține un loc la o facultate de informatică               </p>
               {/* Features */}
               <div className='text-gray-600 flex justify-center items-center'>
                 <ul className="space-y-2">
@@ -58,7 +57,7 @@ function StartLearningPage() {
                       </svg>
                     </div>
                     <p className="font-medium ">
-                      Iti dezvolti gandirea critica
+                      Intrarea la o facultate de specialitate
                     </p>
                   </li>
                   <li className="flex items-center">
@@ -83,7 +82,7 @@ function StartLearningPage() {
                         />
                       </svg>
                     </div>
-                    <p className="font-medium">Pentru interviurile de angajare</p>
+                    <p className="font-medium">Pregătirea pentru viitor </p>
                   </li>
                   <li className="flex items-center">
                     <div className="mr-2">
@@ -107,7 +106,7 @@ function StartLearningPage() {
                         />
                       </svg>
                     </div>
-                    <p className="font-medium">Gandire analitica</p>
+                    <p className="font-medium">Invățarea continuă</p>
                   </li>
                   <li className="flex items-center">
                     <div className="mr-2">
@@ -149,8 +148,7 @@ function StartLearningPage() {
                 Bacalaureat
               </h1>
               <p className="px-4 text-gray-500 mb-10">
-                Schedule and reserve classNamerooms at one campus or multiple campuses. Keep detailed records of student attendance
-              </p>
+                Poți beneficia de ghiduri studiu, subiecte din anii trecuți rezolvate complet, cu explicații detaliate și feedback personalizat la propriile soluții              </p>
 
               {/* Features */}
               <div className='text-gray-600 flex justify-center items-center'>
@@ -178,7 +176,7 @@ function StartLearningPage() {
                       </svg>
                     </div>
                     <p className="font-medium ">
-                      Iti dezvolti gandirea critica
+                      Invatarea de noi tehnici de rezolvare
                     </p>
                   </li>
                   <li className="flex items-center">
@@ -203,7 +201,7 @@ function StartLearningPage() {
                         />
                       </svg>
                     </div>
-                    <p className="font-medium">Pentru interviurile de angajare</p>
+                    <p className="font-medium">Imbunatatirea performantelor scolare</p>
                   </li>
                   <li className="flex items-center">
                     <div className="mr-2">
@@ -227,7 +225,7 @@ function StartLearningPage() {
                         />
                       </svg>
                     </div>
-                    <p className="font-medium">Gandire analitica</p>
+                    <p className="font-medium"> Gestionarea eficienta a timpului </p>
                   </li>
                   <li className="flex items-center">
                     <div className="mr-2">
@@ -251,7 +249,7 @@ function StartLearningPage() {
                         />
                       </svg>
                     </div>
-                    <p className="font-medium">Concentrare intensa</p>
+                    <p className="font-medium">Abilitatea de concentrare</p>
                   </li>
                 </ul>
               </div>
@@ -269,8 +267,7 @@ function StartLearningPage() {
                 Olimpiada
               </h1>
               <p className="px-4 text-gray-500 mb-10">
-                Schedule and reserve classNamerooms at one campus or multiple campuses. Keep detailed records of student attendance
-              </p>
+               asdfasdfasdf Oferim o varietate de materiale de învățare, astfel încât să poți învăța în ritmul tău ca să te poți simți pregătit pentru a excela la competițiile de programare              </p>
               {/* Features */}
               <div className='text-gray-600 flex justify-center items-center'>
                 <ul className="space-y-2">
@@ -297,7 +294,7 @@ function StartLearningPage() {
                       </svg>
                     </div>
                     <p className="font-medium ">
-                      Iti dezvolti gandirea critica
+                      Rezolvarea de probleme de algoritmica
                     </p>
                   </li>
                   <li className="flex items-center">
@@ -322,7 +319,7 @@ function StartLearningPage() {
                         />
                       </svg>
                     </div>
-                    <p className="font-medium">Pentru interviurile de angajare</p>
+                    <p className="font-medium">Algoritmi si structuri de date complexe</p>
                   </li>
                   <li className="flex items-center">
                     <div className="mr-2">
@@ -346,7 +343,7 @@ function StartLearningPage() {
                         />
                       </svg>
                     </div>
-                    <p className="font-medium">Gandire analitica</p>
+                    <p className="font-medium">Gandire critica si rationament logic</p>
                   </li>
                   <li className="flex items-center">
                     <div className="mr-2">
@@ -370,7 +367,7 @@ function StartLearningPage() {
                         />
                       </svg>
                     </div>
-                    <p className="font-medium">Concentrare intensa</p>
+                    <p className="font-medium">Utilizarea abilitatilor matematica</p>
                   </li>
                 </ul>
               </div>

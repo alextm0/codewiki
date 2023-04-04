@@ -51,7 +51,7 @@ const Contact = () => {
                 <label htmlFor="name" className="sr-only">Name</label>
                 {/* :::input */}
                 <input ref={nameRef} type="text" id="name" name="name"
-                  placeholder="Name"
+                  placeholder="Nume"
                   className="bg-gray-900 pl-3 py-1 form-input w-full block shadow-sm rounded border-gray-700 text-base placeholder-gray-700 focus:border-green-400 focus:ring-1 focus:ring-green-400"
                 />
               </div>
@@ -61,7 +61,7 @@ const Contact = () => {
                 <label htmlFor="email" className="sr-only">Email</label>
                 {/* :::input */}
                 <input ref={emailRef} type="email" id="email" name="email"
-                  placeholder="Email Address"
+                  placeholder="Adresa de email"
                   className="bg-gray-900 pl-3 py-1 form-input w-full block shadow-sm rounded border-gray-700 text-base placeholder-gray-700 focus:border-green-400 focus:ring-1 focus:ring-green-400"
                 />
               </div>
@@ -71,7 +71,7 @@ const Contact = () => {
                 <label htmlFor="message" className="sr-only">Message</label>
                 {/* :::input */}
                 <textarea ref={messageRef} name="message" id="message" cols="30" rows="4"
-                  placeholder="How can we help?"
+                  placeholder="Cum te putem ajuta?"
                   className="bg-gray-900 pl-3 py-1 form-textarea resize-none w-full shadow-sm rounded border-gray-700 placeholder-gray-700 focus:border-green-400 focus:ring-green-400"
                 ></textarea>
               </div>
@@ -86,9 +86,11 @@ const Contact = () => {
           <div className="order-2 md:order-3 col-span-full md:col-span-1 py-5 md:py-10 px-6">
             <div className="mx-auto max-w-xl flex flex-col space-y-5">
               {/* ::Title Contact Us */}
-              <h2 className="text-4xl font-quicksand font-semibold text-gray-200 uppercase">Contact us</h2>
+              <h2 className="text-4xl font-quicksand font-semibold text-gray-200 uppercase">Contact</h2>
               {/* ::Text */}
-              <p className="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis unde, voluptatibus nemo molestiae iure, repudiandae quaerat ipsam, labore sed dolorem nisi odit at esse ullam suscipit quidem necessitatibus aut modi.</p>
+              <p className="text-sm text-gray-500">
+                Ne-ar face placere sa auzim de la tine! Daca ai intrebari, sugestii sau feedback pentru noi, nu ezita sa ne contactezi prin intermediul formularului de mai jos. Vom incerca sa iti raspundem cat mai curand posibil. Multumim pentru interesul acordat blogului nostru.
+              </p>
               {/* ::Email contact */}
               <a href="#mail" className="inline-flex items-center text-base text-blue-400 font-semibold hover:text-orange-500">
                 <MailIcon className="mr-2 w-5 text-gray-400" />

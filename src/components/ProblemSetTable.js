@@ -16,28 +16,36 @@ function ProblemSetTable({ problemSet }) {
   const easyBadge = <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-green-100 text-green-800">Easy</span>
   const hardBadge = <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-red-100 text-red-800">Hard</span>
 
+  let currentBadge;
+  if (problemSet.badge == "hard")
+    currentBadge = hardBadge;
+  else if(problemSet.badge == "normal")
+    currentBadge = normalBadge;
+  else if(problemSet.badge == "easy")
+    currentBadge = easyBadge;
+
   const ProblemSetRow = problemSet.map((problem => {
     return (
       < tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700" >
         <th scope="row" class="py-4 px-6 mt-[6px] font-medium flex items-center gap-5 text-gray-900 whitespace-nowrap dark:text-white">
           {/* <Dropdown position="down" /> */}
-          <a href={problem.link} className='inline-block text-gray-600 relative after:absolute after:bg-gray-400 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300'> 
-            { problem.source }
+          <a href={problem.sourceLink} className='inline-block text-gray-600 relative after:absolute after:bg-gray-400 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300'>
+            {problem.source}
           </a>
         </th>
         <td class="py-4 px-6">
-          <a href="#" className='font-medium text-[#2563eb]'>
-            { problem.name }
+          <a href={problem.link} className='font-medium text-[#2563eb]'>
+            {problem.name}
           </a>
         </td>
 
         {/* Badge */}
         <td class="py-4 px-6 text-gray-600">
-          {hardBadge}
+          { problem.badge === "hard" ? hardBadge : problem.badge === "normal" ? normalBadge : easyBadge }
         </td>
 
         <td class="py-4 px-6 text-gray-600">
-          { problem.tags }
+          {problem.tags}
         </td>
 
         <td class="py-4 px-6 text-2xl text-gray-600">
@@ -74,7 +82,7 @@ function ProblemSetTable({ problemSet }) {
             </tr>
           </thead>
           <tbody>
-            { ProblemSetRow }
+            {ProblemSetRow}
           </tbody>
         </table>
       </div>

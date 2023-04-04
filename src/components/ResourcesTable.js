@@ -16,7 +16,7 @@ function ResourcesTable({ header, resource }) {
           </a>
         </th>
         <td class="py-4 px-6">
-          <a href='#' className='font-medium text-[#2563eb]'> {resource.title} </a>
+          <a href={resource.link} className='font-medium text-[#2563eb]'> {resource.title} </a>
         </td>
         <td class="py-4 px-6 text-gray-600">
           {resource.description}

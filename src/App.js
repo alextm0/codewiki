@@ -13,6 +13,8 @@ import Post from './pages/Post';
 import StartLearningPage from './pages/StartLearningPage.js'
 import ErrorPage from './pages/ErrorPage.js'
 
+import Markdown from './pages/Markdown'
+
 export default function App() {
   useEffect(() => {
     AOS.init({ once: true });
@@ -21,6 +23,7 @@ export default function App() {
 
   return (
     <Routes>
+      <Route path="/codewiki/render" element={<Markdown />} />
       <Route path="/codewiki" element={<MainPage />} />
       <Route path="/codewiki/articles" element={<ArticlePage />} />
       <Route path='/codewiki/admitere' element={<AdmiterePage />} />
