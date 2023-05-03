@@ -5,7 +5,7 @@ import Category from './Category'
 function Bacalaureat() {
   return (
     <div className='max-w-[1024px] mx-auto'>
-      <Category categoryName={"Algoritmi elementari"} categoryDescription={"Vestibulum diam nunc"} topics={[
+      <Category categoryName={"Algoritmi elementari"} categoryDescription={"Clasa IX - X"} topics={[
         {
           name: "Algoritmi pe cifrele unui numar",
           description: "Aflarea numarului de cifre, sumei cifrelor. Adaugarea si eliminarea de cifre. Oglinditul. Verificare palindrom. Concatenarea a doua numere",
