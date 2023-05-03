@@ -15,7 +15,7 @@ function Admitere() {
   return (
     <div className='max-w-[1024px] mx-auto'>
       <div className='max-w-[1024px] mx-auto'>
-        <Category categoryName={"Algoritmi elementari"} categoryDescription={"Vestibulum diam nunc"} topics={[
+        <Category categoryName={"Algoritmi elementari"} categoryDescription={"Clasa IX"} topics={[
           {
             name: "Algoritmi pe cifrele unui numar",
             description: "Aflarea numarului de cifre, sumei cifrelor. Adaugarea si eliminarea de cifre. Oglinditul. Verificare palindrom. Concatenarea a doua numere",
@@ -42,7 +42,7 @@ function Admitere() {
             stars: 2
           }
         ]} />
-        <Category categoryName={"Subprograme"} categoryDescription={"Vestibulum diam nunc"} topics={[
+        <Category categoryName={"Subprograme"} categoryDescription={"Clasa X"} topics={[
           {
             name: "Subprograme care returneaza valori",
             description: "",
@@ -70,7 +70,7 @@ function Admitere() {
           },
         ]} />
 
-        <Category categoryName={"Vectori"} categoryDescription={"Vestibulum diam nuac"} topics={[
+        <Category categoryName={"Vectori"} categoryDescription={"Clasa IX - Clasa X"} topics={[
           {
             name: "Sortarea vectorilor",
             description: "Bubble Sort. Selection Sort. Insertion Sort. Merge Sort. Quick Sort",
@@ -98,7 +98,7 @@ function Admitere() {
           },
 
         ]} />
-        <Category categoryName={"Matrice"} categoryDescription={"Vestibulum diam nuac"} topics={[
+        <Category categoryName={"Matrice"} categoryDescription={"Clasa X"} topics={[
           {
             name: "Parcurgerea matricelor oarecare / patratice",
             description: "Zone speciale din matrice.",
@@ -115,7 +115,7 @@ function Admitere() {
             stars: 3
           },
         ]} />
-        <Category categoryName={"Siruri de caractere"} categoryDescription={"Vestibulum diam nuac"} topics={[
+        <Category categoryName={"Siruri de caractere"} categoryDescription={"Clasa XI"} topics={[
           {
             name: "Functii predefinite",
             description: "Utilizarea functiilor din libraria <cstring>",
@@ -127,7 +127,7 @@ function Admitere() {
             stars: 3
           },
         ]} />
-        <Category categoryName={"Backtracking"} categoryDescription={"Vestibulum diam nuac"} topics={[
+        <Category categoryName={"Backtracking"} categoryDescription={"Clasa XI"} topics={[
           {
             name: "Generarea elementelor de combinatorica",
             description: "Problema reginelor. Problema pe tabla de sah. Cautarea unui cuvant intr-o matrice",
@@ -139,7 +139,7 @@ function Admitere() {
             stars: 3
           }
         ]} />
-        <Category categoryName={"Grafuri"} categoryDescription={"Vestibulum diam nuac"} topics={[
+        <Category categoryName={"Grafuri"} categoryDescription={"Clasa XI"} topics={[
           {
             name: "Teoria grafurilor neorientate",
             description: "Proprietati ale grafurilor neorienate",

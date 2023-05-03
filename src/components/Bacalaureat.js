@@ -23,7 +23,7 @@ function Bacalaureat() {
         }
       ]} />
 
-      <Category categoryName={"Subprograme"} categoryDescription={"Vestibulum diam nunc"} topics={[
+      <Category categoryName={"Subprograme"} categoryDescription={"Clasa X"} topics={[
         {
           name: "Subprograme care returneaza valori",
           description: "",
@@ -51,7 +51,7 @@ function Bacalaureat() {
         },
       ]} />
 
-      <Category categoryName={"Vectori"} categoryDescription={"Vestibulum diam nuac"} topics={[
+      <Category categoryName={"Vectori"} categoryDescription={"Clasa IX"} topics={[
         {
           name: "Sortarea vectorilor",
           description: "Bubble Sort. Selection Sort. Insertion Sort. Merge Sort. Quick Sort",
@@ -79,7 +79,7 @@ function Bacalaureat() {
         },
 
       ]} />
-      <Category categoryName={"Matrice"} categoryDescription={"Vestibulum diam nuac"} topics={[
+      <Category categoryName={"Matrice"} categoryDescription={"Clasa X"} topics={[
         {
           name: "Parcurgerea matricelor oarecare / patratice",
           description: "Zone speciale din matrice.",
@@ -96,7 +96,7 @@ function Bacalaureat() {
           stars: 3
         },
       ]} />
-      <Category categoryName={"Siruri de caractere"} categoryDescription={"Vestibulum diam nuac"} topics={[
+      <Category categoryName={"Siruri de caractere"} categoryDescription={"Clasa X - Clasa XI"} topics={[
         {
           name: "Functii predefinite",
           description: "Utilizarea functiilor din libraria <cstring>",
@@ -108,7 +108,7 @@ function Bacalaureat() {
           stars: 3
         }
       ]} />
-      <Category categoryName={"Backtracking"} categoryDescription={"Vestibulum diam nuac"} topics={[
+      <Category categoryName={"Backtracking"} categoryDescription={"Clasa XI"} topics={[
         {
           name: "Generarea elementelor de combinatorica",
           description: "Generarea de permutari, combinari, aranjamente, produs cartezian",
@@ -120,7 +120,7 @@ function Bacalaureat() {
           stars: 3
         }
       ]} />
-      <Category categoryName={"Grafuri"} categoryDescription={"Vestibulum diam nuac"} topics={[
+      <Category categoryName={"Grafuri"} categoryDescription={"Clasa XI"} topics={[
         {
           name: "Teoria grafurilor neorientate",
           description: "Proprietati ale grafurilor neorienate",

@@ -42,34 +42,35 @@ const Contact = () => {
       <div className="relative mx-auto w-full max-w-7xl py-20">
         <div className="grid grid-cols-2">
 
-          {/* :CONTACT FORM CONTAINER */}
+          {/* CONTACT FORM CONTAINER */}
           <div className="order-3 md:order-2 col-span-full md:col-span-1 py-5 md:py-10 px-6">
             <form action="" className="mx-auto max-w-xl space-y-4" onSubmit={handleSubmit}>
-              {/* ::Name Input */}
+              {/* Name Input */}
               <div>
-                {/* :::label */}
-                <label htmlFor="name" className="sr-only">Name</label>
-                {/* :::input */}
+                {/* label */}
+                <label htmlFor="name" className="sr-only"> Name </label>
+                {/* input */}
                 <input ref={nameRef} type="text" id="name" name="name"
                   placeholder="Nume"
                   className="bg-gray-900 pl-3 py-1 form-input w-full block shadow-sm rounded border-gray-700 text-base placeholder-gray-700 focus:border-green-400 focus:ring-1 focus:ring-green-400"
                 />
               </div>
-              {/* ::Email Input */}
+              
+              {/* Email Input */}
               <div>
-                {/* :::label */}
+                {/* label */}
                 <label htmlFor="email" className="sr-only">Email</label>
-                {/* :::input */}
+                {/* input */}
                 <input ref={emailRef} type="email" id="email" name="email"
                   placeholder="Adresa de email"
                   className="bg-gray-900 pl-3 py-1 form-input w-full block shadow-sm rounded border-gray-700 text-base placeholder-gray-700 focus:border-green-400 focus:ring-1 focus:ring-green-400"
                 />
               </div>
-              {/* ::Message Input */}
+              {/* Message Input */}
               <div className="col-span-full">
-                {/* :::label */}
+                {/* label */}
                 <label htmlFor="message" className="sr-only">Message</label>
-                {/* :::input */}
+                {/* input */}
                 <textarea ref={messageRef} name="message" id="message" cols="30" rows="4"
                   placeholder="Cum te putem ajuta?"
                   className="bg-gray-900 pl-3 py-1 form-textarea resize-none w-full shadow-sm rounded border-gray-700 placeholder-gray-700 focus:border-green-400 focus:ring-green-400"
