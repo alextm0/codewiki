@@ -7,39 +7,82 @@ function Olimpiada() {
   return (
     <div className='max-w-[1024px] mx-auto'>
       <div className='max-w-[1024px] mx-auto'>
-        <Category categoryName={"Complete Search"} categoryDescription={"Vestibulum diam nunc"} topics={[
+        <Category categoryName={"Grafuri"} categoryDescription={"Clasa XI-XII"} topics={[
           {
-            name: "Custom Comparators and Coordinate Compression",
-            description: "Using a custom comparator to sort custom objects or values in a non-default order and coordinate compressing values from a large range to a smaller one.",
-            stars: 4
-          },
-          {
-            name: "Two Pointers",
-            description: "Iterating two monotonic pointers across an array to search for a pair of indices satisfying some condition in linear time.",
+            name: "Disjoint Set Union",
+            description: "",
             stars: 3
           },
           {
-            name: "More Operations on Sorted Sets",
-            description: "Using iterators with sets, finding the next element smaller or larger than a specified key in a set.",
+            name: "Sortarea topologica",
+            description: "",
             stars: 2
           },
           {
-            name: "Greedy Algorithms with Sorting",
-            description: "Solving greedy problems by sorting the input",
+            name: "Algoritmul lui Kruskal",
+            description: "",
+            stars: 4
+          },
+          {
+            name: "Algoritmul lui Tarjan",
+            description: "",
+            stars: 3
+          }
+        ]} />
+
+        <Category categoryName={"Programare Dinamica"} categoryDescription={"Clasa XI-XII"} topics={[
+          {
+            name: "Introducere in DP",
+            description: "",
+            stars: 4
+          },
+          {
+            name: "Problema rucsacului",
+            description: "",
+            stars: 3
+          },
+          {
+            name: "Secventa crescatoare de lungime maxima",
+            description: "",
+            stars: 3
+          },
+          {
+            name: "Bitmask DP",
+            description: "",
+            stars: 3
+          },
+          {
+            name: "Digit DP",
+            description: "",
             stars: 2
           }
         ]} />
 
-        <Category categoryName={"Graphs"} categoryDescription={"Vestibulum diam nuac"} topics={[
+        <Category categoryName={"Combinatorica"} categoryDescription={"Clasa XI-XII"} topics={[
           {
-            name: "Depth First Search (DFS)",
-            description: "Recursively traversing a graph.",
-            stars: 1
+            name: "Divizibilitate",
+            description: "",
+            stars: 4
           },
           {
-            name: "Flood Fill",
-            description: "Recursively traversing a graph.",
-            stars: 3
+            name: "Combinari. Triunghiul lui Pascal",
+            description: "",
+            stars: 4
+          },
+          {
+            name: "Ridicarea la putere in timp logaritmic",
+            description: "",
+            stars: 4
+          },
+          {
+            name: "Invers modular",
+            description: "",
+            stars: 4
+          },
+          {
+            name: "Numere Catalan. Numere Narayana",
+            description: "",
+            stars: 2
           }
         ]} />
       </div>
