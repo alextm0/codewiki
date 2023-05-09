@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/alextm0.github.io/static/css/main.3678616a.css",
-    "main.js": "/alextm0.github.io/static/js/main.650f505f.js",
-    "static/media/hero_img_5.svg": "/alextm0.github.io/static/media/hero_img_5.9e22993d6356d01a27833a8e6638664f.svg",
-    "static/media/fa-solid-900.ttf": "/alextm0.github.io/static/media/fa-solid-900.422cfe2813b03d900c10.ttf",
-    "static/media/fa-brands-400.ttf": "/alextm0.github.io/static/media/fa-brands-400.aff1938a5c48584fa92b.ttf",
-    "static/media/fa-solid-900.woff2": "/alextm0.github.io/static/media/fa-solid-900.64d495f582d4a1590a6c.woff2",
-    "static/media/hero_img_11.svg": "/alextm0.github.io/static/media/hero_img_11.0f0d40a3571d58143eb9790c21b04d0e.svg",
-    "static/media/fa-brands-400.woff2": "/alextm0.github.io/static/media/fa-brands-400.a914b121110f8b6e01c9.woff2",
-    "static/media/fa-regular-400.ttf": "/alextm0.github.io/static/media/fa-regular-400.625dca125b58060788da.ttf",
-    "static/media/post.png": "/alextm0.github.io/static/media/post.75a84ec54c1f4fd5c122.png",
-    "static/media/fa-regular-400.woff2": "/alextm0.github.io/static/media/fa-regular-400.47074dec01b64a5db2c4.woff2",
-    "static/media/fa-v4compatibility.ttf": "/alextm0.github.io/static/media/fa-v4compatibility.ea8535110e0c42fd0046.ttf",
-    "static/media/fa-v4compatibility.woff2": "/alextm0.github.io/static/media/fa-v4compatibility.2ec4574b00d1d21ed0a3.woff2",
-    "static/media/olimpiada-icon.svg": "/alextm0.github.io/static/media/olimpiada-icon.95d857c211bce6985c8a040049b28c25.svg",
-    "static/media/admitere-icon.svg": "/alextm0.github.io/static/media/admitere-icon.a7fd26f9732124a20caa348568f19e10.svg",
-    "index.html": "/alextm0.github.io/index.html",
-    "static/media/segment.md": "/alextm0.github.io/static/media/segment.2aa456aa4779a11d7c0a.md",
-    "static/media/bacalaureat-icon.svg": "/alextm0.github.io/static/media/bacalaureat-icon.5dab082b5fbf08baf43bfea266868f71.svg",
-    "main.3678616a.css.map": "/alextm0.github.io/static/css/main.3678616a.css.map",
-    "main.650f505f.js.map": "/alextm0.github.io/static/js/main.650f505f.js.map"
+    "main.css": "/codewiki/static/css/main.5bf8c947.css",
+    "main.js": "/codewiki/static/js/main.cf907def.js",
+    "static/media/hero_img_5.svg": "/codewiki/static/media/hero_img_5.9e22993d6356d01a27833a8e6638664f.svg",
+    "static/media/fa-solid-900.ttf": "/codewiki/static/media/fa-solid-900.422cfe2813b03d900c10.ttf",
+    "static/media/fa-brands-400.ttf": "/codewiki/static/media/fa-brands-400.aff1938a5c48584fa92b.ttf",
+    "static/media/fa-solid-900.woff2": "/codewiki/static/media/fa-solid-900.64d495f582d4a1590a6c.woff2",
+    "static/media/hero_img_11.svg": "/codewiki/static/media/hero_img_11.0f0d40a3571d58143eb9790c21b04d0e.svg",
+    "static/media/fa-brands-400.woff2": "/codewiki/static/media/fa-brands-400.a914b121110f8b6e01c9.woff2",
+    "static/media/fa-regular-400.ttf": "/codewiki/static/media/fa-regular-400.625dca125b58060788da.ttf",
+    "static/media/post.png": "/codewiki/static/media/post.75a84ec54c1f4fd5c122.png",
+    "static/media/fa-regular-400.woff2": "/codewiki/static/media/fa-regular-400.47074dec01b64a5db2c4.woff2",
+    "static/media/fa-v4compatibility.ttf": "/codewiki/static/media/fa-v4compatibility.ea8535110e0c42fd0046.ttf",
+    "static/media/fa-v4compatibility.woff2": "/codewiki/static/media/fa-v4compatibility.2ec4574b00d1d21ed0a3.woff2",
+    "static/media/olimpiada-icon.svg": "/codewiki/static/media/olimpiada-icon.95d857c211bce6985c8a040049b28c25.svg",
+    "static/media/admitere-icon.svg": "/codewiki/static/media/admitere-icon.a7fd26f9732124a20caa348568f19e10.svg",
+    "index.html": "/codewiki/index.html",
+    "static/media/segment.md": "/codewiki/static/media/segment.2aa456aa4779a11d7c0a.md",
+    "static/media/bacalaureat-icon.svg": "/codewiki/static/media/bacalaureat-icon.5dab082b5fbf08baf43bfea266868f71.svg",
+    "main.5bf8c947.css.map": "/codewiki/static/css/main.5bf8c947.css.map",
+    "main.cf907def.js.map": "/codewiki/static/js/main.cf907def.js.map"
   },
   "entrypoints": [
-    "static/css/main.3678616a.css",
-    "static/js/main.650f505f.js"
+    "static/css/main.5bf8c947.css",
+    "static/js/main.cf907def.js"
   ]
 }
