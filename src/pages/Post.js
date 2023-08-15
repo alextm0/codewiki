@@ -303,7 +303,7 @@ function Post() {
                   source: "Pbinfo",
                   sourceLink: "https://pbinfo.ro",
                   tags: "Arbori de intervale",
-                  badge: "easy"
+                  badge: "normal"
                 },
                 {
                   link: "https://www.pbinfo.ro/probleme/2093/actualizare-element-stergere-minim",
@@ -311,7 +311,7 @@ function Post() {
                   source: "Pbinfo",
                   sourceLink: "https://pbinfo.ro",
                   tags: "Arbori de intervale",
-                  badge: "easy"
+                  badge: "normal"
                 },
                 {
                   link: "https://www.pbinfo.ro/probleme/2095/descompunere-in-intervale",
@@ -319,7 +319,7 @@ function Post() {
                   source: "Pbinfo",
                   sourceLink: "https://pbinfo.ro",
                   tags: "Arbori de intervale",
-                  badge: "easy"
+                  badge: "normal"
                 }, 
                 {
                   link: "https://www.infoarena.ro/problema/rest",
@@ -327,7 +327,7 @@ function Post() {
                   source: "Infoarena",
                   sourceLink: "https://infoarena.ro",
                   tags: "Arbori de intervale",
-                  badge: "easy"
+                  badge: "hard"
                 }
               ]} />
 
