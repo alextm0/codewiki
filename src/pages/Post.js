@@ -8,6 +8,11 @@ import Rating from '../components/Rating'
 import ProblemSetTable from '../components/ProblemSetTable'
 import ResourcesTable from '../components/ResourcesTable'
 
+import MarkdownRenderer from '../Markdown/MarkdownRenderer';
+import articleContent from '../MD_Articles/Article.md';
+
+
+
 import { MathJax, MathJaxContext } from "better-react-mathjax";
 
 function Post() {
@@ -158,17 +163,65 @@ function Post() {
     }
   };
 
+  const markdown = `
+  [Subtitle] Introducere [/Subtitle]
+
+  [Paragraph] 
+    Acesta este un material introductiv in arborii de intervale care prezinta cum se construiesc, dar si un mod intuitiv
+    de a rezolva aplicatiile or in probleme de olimpiada. Exista foarte multe tehnici legate de acest topic, insa
+    ma voi rezuma la lucrurile esentiale pe care cineva care este interesat sau care participa la olimpiada ar trebui sa le stie
+  [/Paragraph]
+    
+  [Paragraph] 
+    Acesta este un material introductiv in arborii de intervale care prezinta cum se construiesc, dar si un mod intuitiv
+    de a rezolva aplicatiile lor in probleme de olimpiada. Exista foarte multe tehnici legate de acest topic, insa
+    ma voi rezuma la lucrurile esentiale pe care cineva care este interesat sau care participa la olimpiada ar trebui sa le stie.
+  [/Paragraph]
+
+  [Paragraph]
+    De mult ori ne intalnim cu probleme care necesita calcule pe subsecvente ale unui sir, precum
+    maximul / minimul pe un interval (RMQ), suma pe un interval (sume partiale) si care dupa stiti exista mai multe metode, insa capitolul
+    la care arborii de intervale sunt necesari este atunci cand sirul se modifica in timp real, neputand sa tratam modificarile separat.
+  [/Paragraph]
+
+  [Subtitle] 
+    Problema clasica 
+  [/Subtitle] 
+
+
+  [Math]
+    Vrem sa rezolvam urmatoarea [InlineLink] problema | https://infoarena.ro/problema/arbint [/InlineLink]. Se da un vector cu $n$ numere naturale, indexat de la $1$. Ne
+    propunem sa cream o structura de date eficienta care sa permita urmatoarele doua operatii:
+  [/Math]
+
+  [IndexedMath]
+    • $  1\\; st\\; dr\\; $ - Sa se determine suma pe intervalul $ [st, dr] (v_{st} + v_{st+1} + ... + v_{dr}) $
+  [/IndexedMath]
+
+  [IndexedMath]
+  • $ 2\\; pos\\; val\\;  $ - Sa se schimbe valoarea elementului de pe pozitia $pos$ in $val$
+  [/IndexedMath]
+  
+  [Paragraph]
+    Hello this is a paragraph [InlineLink] link | https://www.example.com [/InlineLink] other content, other information \\n This is a new line.
+  [/Paragraph]
+
+  `;
+
   return (
     <div className='bg-white font-poppins'>
+      {/* Navbar */}
       <div className='bg-gradient-to-br from-[#102a4a] to-[#342a84] mb-16'>
         <Navbar />
         <PageDivider />
       </div>
 
+
       <div className='md:flex pb-16 md:pb-0 gap-10 justify-center'>
         <div className="max-w-full md:max-w-[1024px] px-6 md:py-16 space-y-12 text-gray-800">
           <Rating stars={4} onBlogPost={true} />
 
+          {/* Title and authors */}
           <div>
             {/* Title */}
             <h1 className='text-gray-800 font-bold text-4xl w-full -mt-5 -mb-3'>
@@ -181,59 +234,21 @@ function Post() {
             </h2>
           </div>
 
+          {/* Page divider */}
           <div className="divider w-[95%]"></div>
+
 
           <div className='flex flex-col gap-5 md:hidden'>
             <TableOfContents />
           </div>
 
+          {/* Main content */}
           <div className='max-w-[900px] font-quicksand font-semibold text-lg text-gray-700'>
             <main>
-              <h2 className='text-orange-500 mb-3 pt-[16px] mt-[-16px] text-3xl font-poppins font-medium' id="motivation-header">
-                Introducere
-              </h2>
-              <p>
-                Acesta este un material introductiv in arborii de intervale care prezinta cum se construiesc, dar si un mod intuitiv
-                de a rezolva aplicatiile lor in probleme de olimpiada. Exista foarte multe tehnici legate de acest topic, insa
-                ma voi rezuma la lucrurile esentiale pe care cineva care este interesat sau care participa la olimpiada ar trebui sa le stie.
-              </p>
-              <br />
 
-              <p className='mb-10'>
-                <p>
-                  De mult ori ne intalnim cu probleme care necesita calcule pe subsecvente ale unui sir, precum
-                  maximul / minimul pe un interval (RMQ), suma pe un interval (sume partiale) si care dupa stiti exista mai multe metode, insa capitolul
-                  la care arborii de intervale sunt necesari este atunci cand sirul se modifica in timp real, neputand sa tratam modificarile separat.
-                </p>
-              </p>
+              <MarkdownRenderer content={markdown} />
 
-              <h2 className='text-orange-500 mb-3 pt-[16px] mt-[-16px] text-3xl font-poppins font-medium' id="motivation-header">
-                Problema clasica
-              </h2>
-              <p className='mb-10'>
-                <MathJaxContext version={3} config={config}>
-                  <MathJax>
-                    Vrem sa rezolvam urmatoarea 
-                    <a className='text-[#2563eb]' href="https://infoarena.ro/problema/arbint"> problema</a>
-                    . Se da un vector cu $n$ numere naturale, indexat de la $1$.
-                    Ne propunem sa cream o structura de date eficienta care sa permita urmatoarele doua operatii: <br />
-                  </MathJax>
 
-                  <div className='pl-10 pt-2'>
-                    <MathJax hideUntilTypeset={"first"}>
-                      {`
-                      • $ 1\\; st\\; dr\\; $ - Sa se determine suma pe intervalul $ [st, dr] (v_{st} + v_{st+1} + ... + v_{dr}) $
-                    `}
-                    </MathJax>
-
-                    <MathJax hideUntilTypeset={"first"}>
-                      {`
-                  • $ 2\\; pos\\; val\\;  $ - Sa se schimbe valoarea elementului de pe pozitia $pos$ in $val$
-                  `}
-                    </MathJax>
-                  </div>
-                </MathJaxContext>
-              </p>
 
 
               <ResourcesTable header={"Materiale de studiu"} resource={[
@@ -331,14 +346,14 @@ function Post() {
                 }
               ]} />
 
-              <h2 className='text-orange-500 mb-3 pt-[16px] mt-10 text-3xl font-poppins font-medium' id="prerequisites-header">
+              {/* <h2 className='text-orange-500 mb-3 pt-[16px] mt-10 text-3xl font-poppins font-medium' id="prerequisites-header">
                 Brute force
               </h2>
               <p className='mb-10'>
 
-              </p>
+              </p> */}
 
-              <MathJaxContext version={3} config={config}>
+              {/* <MathJaxContext version={3} config={config}>
                 <MathJax hideUntilTypeset={"first"}>
                   {
                     `Inside a MathJax block element, one might use both Latex inline math, such
@@ -350,9 +365,9 @@ function Post() {
                     `
                   }
                 </MathJax>
-              </MathJaxContext>
+              </MathJaxContext> */}
 
-              <h2 className='text-orange-500 mb-3 pt-[16px] mt-10 text-3xl font-poppins font-medium' id="tutorial-header">Tutorial</h2>
+              {/* <h2 className='text-orange-500 mb-3 pt-[16px] mt-10 text-3xl font-poppins font-medium' id="tutorial-header">Tutorial</h2>
               <p className='mb-10'>{DummyText}</p>
 
               <h2 className='text-orange-500 mb-3 pt-[16px] mt-10 text-3xl font-poppins font-medium' id="solved-problems-header">Solved Problems</h2>
@@ -363,11 +378,9 @@ function Post() {
               <p>{DummyText}</p>
               <p>{DummyText}</p>
               <p>{DummyText}</p>
-              <p className='mb-10'>{DummyText}</p>
+              <p className='mb-10'>{DummyText}</p> */}
 
-              <div className='mt-10'>
-
-              </div>
+              <div className='mt-10'> </div>
             </main>
           </div>
         </div>
