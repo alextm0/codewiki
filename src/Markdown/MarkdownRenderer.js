@@ -16,9 +16,19 @@ const config = {
   }
 };
 
+const processLineBreaks = (text) => {
+  const lines = text.split('\\n');
+  return lines.map((line, index) => (
+    <React.Fragment key={index}>
+      {line}
+      {index < lines.length - 1 && <br />}
+    </React.Fragment>
+  ));
+};
+
 const Subtitle = ({ text }) => (
   <div className="text-orange-500 mb-3 pt-[16px] mt-[-16px] text-3xl font-poppins font-medium">
-    {text}
+    {processLineBreaks(text)}
   </div>
 );
 
@@ -53,7 +63,7 @@ const Paragraph = ({ text }) => (
 
 const LinkSection = ({ text }) => (
   <div className="flex items-center">
-    {text.split('\n').map((linkSection, i) => {
+    {processLineBreaks(text).map((linkSection, i) => {
       const parts = linkSection.split('::');
       if (parts.length === 2) {
         const title = parts[0].trim();
@@ -77,22 +87,23 @@ const MathBlock = ({ text }) => (
     <MathJax>
       <div className="math">
         {text.split('[InlineLink]').map((segment, index) => {
-          if (index === 0) {
+          if (index % 2 === 0) {
             return (
               <React.Fragment key={index}>
-                {segment}
+                {processLineBreaks(segment)}
               </React.Fragment>
             );
           } else {
-            const [linkSegment, restSegment] = segment.split('[/InlineLink]');
+            const [linkSegment, ...restSegments] = segment.split('[/InlineLink]');
             const [linkText, linkUrl] = linkSegment.split('|').map(item => item.trim());
+            const restContent = restSegments.join('[/InlineLink]');
             return (
               <React.Fragment key={index}>
                 {' '}
                 <a href={linkUrl} className="text-blue-500 hover:underline">
                   {linkText}
                 </a>
-                {restSegment}
+                {processLineBreaks(restContent)}
               </React.Fragment>
             );
           }
@@ -108,22 +119,23 @@ const IndexedMathBlock = ({ text }) => (
       <MathJax>
         <div className="math">
           {text.split('[InlineLink]').map((segment, index) => {
-            if (index === 0) {
+            if (index % 2 === 0) {
               return (
                 <React.Fragment key={index}>
-                  {segment}
+                  {processLineBreaks(segment)}
                 </React.Fragment>
               );
             } else {
-              const [linkSegment, restSegment] = segment.split('[/InlineLink]');
+              const [linkSegment, ...restSegments] = segment.split('[/InlineLink]');
               const [linkText, linkUrl] = linkSegment.split('|').map(item => item.trim());
+              const restContent = restSegments.join('[/InlineLink]');
               return (
                 <React.Fragment key={index}>
                   {' '}
                   <a href={linkUrl} className="text-blue-500 hover:underline">
                     {linkText}
                   </a>
-                  {restSegment}
+                  {processLineBreaks(restContent)}
                 </React.Fragment>
               );
             }

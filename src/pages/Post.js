@@ -202,9 +202,9 @@ function Post() {
   • $ 2\\; pos\\; val\\;  $ - Sa se schimbe valoarea elementului de pe pozitia $pos$ in $val$
   [/IndexedMath]
   
-  [Paragraph]
-    Hello this is a paragraph [InlineLink] link | https://www.example.com [/InlineLink] other content, other information \\n This is a new line.
-  [/Paragraph]
+
+
+
 
   `;
 
@@ -248,7 +248,7 @@ function Post() {
 
               <MarkdownRenderer content={markdown} />
 
-
+              <br /> <br /> <br />
 
 
               <ResourcesTable header={"Materiale de studiu"} resource={[
