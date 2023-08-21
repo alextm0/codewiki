@@ -15,6 +15,11 @@ import ErrorPage from './pages/ErrorPage.js'
 
 import Markdown from './pages/Markdown'
 
+// ARTICLES
+import EuclidBlogPost from './Markdown/Articles/Euclid/Euclid_BlogPost'
+import MarsBlogPost from './Markdown/Articles/Mars/Mars_BlogPost'
+import ParantezareBlogPost from './Markdown/Articles/Parantezare/Parantezare_BlogPost'
+
 export default function App() {
   useEffect(() => {
     AOS.init({ once: true });
@@ -22,19 +27,24 @@ export default function App() {
   }, [])
 
   return (
-      <Routes>
-        <Route path="/codewiki/render" element={<Markdown />} />
-        <Route path="/codewiki" element={<MainPage />} />
-        <Route path="/codewiki/articles" element={<ArticlePage />} />
-        <Route path='/codewiki/admitere' element={<AdmiterePage />} />
-        <Route path='/codewiki/bacalaureat' element={<BacalaureatPage />} />
-        <Route path='/codewiki/olimpiada' element={<OlimpiadaPage />} />
-        <Route path='/codewiki/blog' element={<Post />} />
-        <Route path='/codewiki/learn' element={<StartLearningPage />} />
-        <Route path='/codewiki/problems' element={<ErrorPage />} />
-        <Route path='/codewiki/signup' element={<ErrorPage />} />
-        <Route path='/codewiki/login' element={<ErrorPage />} />
-      </Routes>
+    <Routes>
+      <Route path="/codewiki/render" element={<Markdown />} />
+      <Route path="/codewiki" element={<MainPage />} />
+      <Route path="/codewiki/articles" element={<ArticlePage />} />
+      <Route path='/codewiki/admitere' element={<AdmiterePage />} />
+      <Route path='/codewiki/bacalaureat' element={<BacalaureatPage />} />
+      <Route path='/codewiki/olimpiada' element={<OlimpiadaPage />} />
+      <Route path='/codewiki/learn' element={<StartLearningPage />} />
+      <Route path='/codewiki/problems' element={<ErrorPage />} />
+      <Route path='/codewiki/signup' element={<ErrorPage />} />
+      <Route path='/codewiki/login' element={<ErrorPage />} />
+
+      {/* ARTICLES */}
+      <Route path='/codewiki/blog/' element={<Post />} />
+      <Route path='/codewiki/blog/euclid/' element={<EuclidBlogPost />} />
+      <Route path='/codewiki/blog/mars/' element={<MarsBlogPost />} />
+      <Route path='/codewiki/blog/parantezare/' element={<ParantezareBlogPost />} />
+    </Routes>
 
   )
 }

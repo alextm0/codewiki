@@ -1,6 +1,9 @@
 import { MathJax, MathJaxContext } from "better-react-mathjax";
 import React from 'react';
 
+import ResourcesTable from '../../components/ResourcesTable'
+import ProblemSetTable from '../../components/ProblemSetTable'
+
 const config = {
   loader: { load: ["[tex]/html"] },
   tex: {
@@ -25,12 +28,13 @@ const processLineBreaks = (text) => {
     </React.Fragment>
   ));
 };
-
-const Subtitle = ({ text }) => (
-  <div className="text-orange-500 mb-3 pt-[16px] mt-[-16px] text-3xl font-poppins font-medium">
-    {processLineBreaks(text)}
-  </div>
-);
+function Subtitle({ text }) {
+  return (
+    <div className='text-orange-500 mb-3 pt-[16px] mt-10 text-3xl font-poppins font-medium' id="prerequisites-header">
+      {processLineBreaks(text)}
+    </div>
+  );
+}
 
 const Paragraph = ({ text }) => (
   <p>
@@ -60,6 +64,38 @@ const Paragraph = ({ text }) => (
   </p>
 );
 
+const IndexedMathBlock = ({ text }) => (
+  <MathJaxContext version={3} config={config}>
+    <div className='pl-10 pt-2'>
+      <MathJax>
+        <div className="math">
+          {text.split('[InlineLink]').map((segment, index) => {
+            if (index % 2 === 0) {
+              return (
+                <React.Fragment key={index}>
+                  {processLineBreaks(segment)}
+                </React.Fragment>
+              );
+            } else {
+              const [linkSegment, ...restSegments] = segment.split('[/InlineLink]');
+              const [linkText, linkUrl] = linkSegment.split('|').map(item => item.trim());
+              const restContent = restSegments.join('[/InlineLink]');
+              return (
+                <React.Fragment key={index}>
+                  {' '}
+                  <a href={linkUrl} className="text-blue-500 hover:underline">
+                    {linkText}
+                  </a>
+                  {processLineBreaks(restContent)}
+                </React.Fragment>
+              );
+            }
+          })}
+        </div>
+      </MathJax>
+    </div>
+  </MathJaxContext>
+);
 
 const LinkSection = ({ text }) => (
   <div className="flex items-center">
@@ -113,46 +149,14 @@ const MathBlock = ({ text }) => (
   </MathJaxContext>
 );
 
-const IndexedMathBlock = ({ text }) => (
-  <MathJaxContext version={3} config={config}>
-    <div className='pl-10 pt-2'>
-      <MathJax>
-        <div className="math">
-          {text.split('[InlineLink]').map((segment, index) => {
-            if (index % 2 === 0) {
-              return (
-                <React.Fragment key={index}>
-                  {processLineBreaks(segment)}
-                </React.Fragment>
-              );
-            } else {
-              const [linkSegment, ...restSegments] = segment.split('[/InlineLink]');
-              const [linkText, linkUrl] = linkSegment.split('|').map(item => item.trim());
-              const restContent = restSegments.join('[/InlineLink]');
-              return (
-                <React.Fragment key={index}>
-                  {' '}
-                  <a href={linkUrl} className="text-blue-500 hover:underline">
-                    {linkText}
-                  </a>
-                  {processLineBreaks(restContent)}
-                </React.Fragment>
-              );
-            }
-          })}
-        </div>
-      </MathJax>
-    </div>
-  </MathJaxContext>
-);
-
-const InlineLink = ({ text }) => {
-  const [linkName, linkUrl] = text.split('|').map((item) => item.trim());
-  return (
-    <a href={linkUrl} className="text-blue-500 hover:underline">
-      {linkName}
-    </a>
-  );
+const parseResourceData = (data) => {
+  try {
+    const parsedData = JSON.parse(data);
+    return parsedData;
+  } catch (error) {
+    console.error('Error parsing resource data:', error);
+    return null;
+  }
 };
 
 const MarkdownRenderer = ({ content }) => {
@@ -177,9 +181,7 @@ const MarkdownRenderer = ({ content }) => {
               case 'Math':
                 return <MathBlock key={index} text={text} />;
               case 'IndexedMath':
-                return <IndexedMathBlock key={index} text={text}/>;
-              case 'InlineLink':
-                return null; // Inline links will be handled within the Paragraph component
+                return <IndexedMathBlock key={index} text={text} />;
               default:
                 return null;
             }

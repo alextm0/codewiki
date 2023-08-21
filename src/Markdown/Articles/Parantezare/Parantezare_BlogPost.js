@@ -1,16 +1,17 @@
 import React from 'react'
-import '../index.css'
+import '../../../index.css'
 
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import PageDivider from '../components/PageDivider'
-import Rating from '../components/Rating'
-import ProblemSetTable from '../components/ProblemSetTable'
-import ResourcesTable from '../components/ResourcesTable'
 
-import MarkdownRenderer from '../Markdown/Components/MarkdownRenderer';
+import Navbar from '../../../components/Navbar'
+import Footer from '../../../components/Footer'
+import PageDivider from '../../../components/PageDivider'
+import Rating from '../../../components/Rating'
+import ProblemSetTable from '../../../components/ProblemSetTable'
+import ResourcesTable from '../../../components/ResourcesTable'
 
-import articleContent from '../Markdown/Articles/SegTrees/SegTrees_Content'
+import MarkdownRenderer from '../../Components/MarkdownRenderer'
+
+import articleContent from './Parantezare_Content'
 
 function Post() {
   const Headings = ({ headings, activeId }) => (
