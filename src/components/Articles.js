@@ -16,7 +16,7 @@ function Articles() {
             description = "In acest articol voi prezenta conceptele de CMMDC si CMMMC, precum si algoritmul lui Euclid prin cele doua ..."/>
           </div>
         </Link>
-        <Link to={'codewiki/blog/mars'}>
+        <Link to={'/codewiki/blog/mars'}>
           <div data-aos="fade-up" data-aos-delay="300">
             <BlogPost badge="OLIMPIADA" title="Smenul lui Mars" 
             description= "Smenul lui Mars este o metoda eficienta de a efectua un anumit tip de operatii asupra unui vector ..."/>

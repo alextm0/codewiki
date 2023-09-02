@@ -14,7 +14,6 @@ function AdmiterePage() {
         <PageDivider />
       </div>
       <Bacalaureat />
-      <Footer />
     </div>
   )
 }

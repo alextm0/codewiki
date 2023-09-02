@@ -14,7 +14,6 @@ function AdmiterePage() {
         <PageDivider />
       </div>
       <Olimpiada />
-      <Footer />
     </div>
   )
 }

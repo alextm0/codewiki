@@ -18,7 +18,7 @@ function BlogPost({ badge, title, date, description }) {
 
       </div>
       <div className="bg-white w-full px-4 pb-4 pt-1">
-        <a href="#" className="text-gray-900 text-xl font-bold font-quicksand">
+        <a href="" className="text-gray-900 text-xl font-bold font-quicksand">
           {title}
         </a>
 

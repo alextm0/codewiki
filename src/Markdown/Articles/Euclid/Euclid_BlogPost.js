@@ -318,7 +318,6 @@ function Post() {
           <TableOfContents />
         </div>
       </div>
-      <Footer />
     </div>
   )
 }

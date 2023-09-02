@@ -13,7 +13,6 @@ function ArticlePage() {
         <PageDivider />
       </div>
       <Articles />
-      <Footer />
     </div>
   )
 }

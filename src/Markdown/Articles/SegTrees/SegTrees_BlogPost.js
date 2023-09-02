@@ -12,6 +12,14 @@ import ResourcesTable from '../../../components/ResourcesTable'
 import MarkdownRenderer from '../../Components/MarkdownRenderer'
 
 import articleContent from './SegTrees_Content'
+import articleContent2 from './SegTrees_Content2'
+
+// Images
+import Image0 from './images/img0.png'
+import Image1 from './images/img1.png'
+import Image2 from './images/img2.png'
+
+
 
 function Post() {
   const Headings = ({ headings, activeId }) => (
@@ -146,21 +154,6 @@ function Post() {
   const DummyText =
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
 
-  const config = {
-    loader: { load: ["[tex]/html"] },
-    tex: {
-      packages: { "[+]": ["html"] },
-      inlineMath: [
-        ["$", "$"],
-        ["\\(", "\\)"]
-      ],
-      displayMath: [
-        ["$$", "$$"],
-        ["\\[", "\\]"]
-      ]
-    }
-  };
-
   return (
     <div className='bg-white font-poppins'>
       {/* Navbar */}
@@ -171,6 +164,7 @@ function Post() {
 
       <div className='md:flex pb-16 md:pb-0 gap-10 justify-center'>
         <div className="max-w-full md:max-w-[1024px] px-6 md:py-16 space-y-12 text-gray-800">
+          {/* Rating */}
           <Rating stars={4} onBlogPost={true} />
 
           {/* Title and authors */}
@@ -189,7 +183,7 @@ function Post() {
           {/* Page divider */}
           <div className="divider w-[95%]"></div>
 
-
+          {/* Table of contents */}
           <div className='flex flex-col gap-5 md:hidden'>
             <TableOfContents />
           </div>
@@ -198,10 +192,22 @@ function Post() {
           <div className='max-w-[900px] font-quicksand font-semibold text-lg text-gray-700'>
             <main>
 
+              {/* Content 1 */}
               <MarkdownRenderer content={articleContent} />
 
-              <br /> <br /> <br />
+              <br /> 
 
+              <div className='flex justify-between'>
+                <img src={Image0} alt="" />
+                <img src={Image1} alt="" />
+                <img src={Image2} alt="" />
+              </div>
+
+              <br /><br /><br />
+
+              <MarkdownRenderer content={articleContent2} />
+              
+              <br /><br /><br />
 
               <ResourcesTable header={"Materiale de studiu"} resource={[
                 {

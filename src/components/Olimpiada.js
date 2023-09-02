@@ -9,22 +9,26 @@ function Olimpiada() {
       <div className='max-w-[1024px] mx-auto'>
         <Category categoryName={"Grafuri"} categoryDescription={"Clasa XI-XII"} topics={[
           {
-            name: "Disjoint Set Union",
+            name: "Disjoint Set Union",            
+            tag: "mars",
             description: "",
             stars: 3
           },
           {
-            name: "Sortarea topologica",
+            name: "Sortarea topologica",            
+            tag: "mars",
             description: "",
             stars: 2
           },
           {
-            name: "Algoritmul lui Kruskal",
+            name: "Algoritmul lui Kruskal",            
+            tag: "mars",
             description: "",
             stars: 4
           },
           {
-            name: "Algoritmul lui Tarjan",
+            name: "Algoritmul lui Tarjan",            
+            tag: "mars",
             description: "",
             stars: 3
           }
@@ -32,27 +36,32 @@ function Olimpiada() {
 
         <Category categoryName={"Programare Dinamica"} categoryDescription={"Clasa XI-XII"} topics={[
           {
-            name: "Introducere in DP",
+            name: "Introducere in DP",            
+            tag: "mars",
             description: "",
             stars: 4
           },
           {
-            name: "Problema rucsacului",
+            name: "Problema rucsacului",            
+            tag: "mars",
             description: "",
             stars: 3
           },
           {
-            name: "Secventa crescatoare de lungime maxima",
+            name: "Secventa crescatoare de lungime maxima",            
+            tag: "mars",
             description: "",
             stars: 3
           },
           {
-            name: "Bitmask DP",
+            name: "Bitmask DP",            
+            tag: "mars",
             description: "",
             stars: 3
           },
           {
-            name: "Digit DP",
+            name: "Digit DP",            
+            tag: "mars",
             description: "",
             stars: 2
           }
@@ -60,27 +69,32 @@ function Olimpiada() {
 
         <Category categoryName={"Combinatorica"} categoryDescription={"Clasa XI-XII"} topics={[
           {
-            name: "Divizibilitate",
+            name: "Divizibilitate",            
+            tag: "mars",
             description: "",
             stars: 4
           },
           {
-            name: "Combinari. Triunghiul lui Pascal",
+            name: "Combinari. Triunghiul lui Pascal",            
+            tag: "mars",
             description: "",
             stars: 4
           },
           {
-            name: "Ridicarea la putere in timp logaritmic",
+            name: "Ridicarea la putere in timp logaritmic",            
+            tag: "mars",
             description: "",
             stars: 4
           },
           {
-            name: "Invers modular",
+            name: "Invers modular",            
+            tag: "mars",
             description: "",
             stars: 4
           },
           {
-            name: "Numere Catalan. Numere Narayana",
+            name: "Numere Catalan. Numere Narayana",            
+            tag: "mars",
             description: "",
             stars: 2
           }

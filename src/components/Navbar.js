@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import Logo from '../assets/logo.png'
@@ -8,6 +8,22 @@ import { FiMenu } from 'react-icons/fi'
 function Navbar() {
   const [sidebar, setSidebar] = useState('');
   const [dropdown, setDropdown] = useState(false);
+
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (dropdown && dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdown(false);
+      }
+    };
+  
+    window.addEventListener('click', handleOutsideClick);
+  
+    return () => {
+      window.removeEventListener('click', handleOutsideClick);
+    };
+  }, [dropdown]);
 
   function toggleSidebar() {
     setSidebar((prev) => {
@@ -40,7 +56,7 @@ function Navbar() {
               <Link to="/codewiki/articles" className="text-gray-500 hover:text-white"> Articole </Link>
             </div>{/* Dropdown */}
             <div class="flex items-center justify-center">
-              <div class="relative inline-block">
+              <div ref={dropdownRef} class="relative inline-block">
                 {/* <!-- Dropdown toggle button --> */}
                 <div class="relative after:absolute after:bg-gray-200 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300">
                   <button onClick={toggleDropdown} class="inline-flex gap-1 items-center relative z-10 p-2 focus:outline-none hover:text-white">
