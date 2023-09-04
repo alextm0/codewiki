@@ -1,38 +1,43 @@
-import React from 'react'
+import React from "react";
 
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import PageDivider from '../components/PageDivider'
+import { Navbar, Footer, PageDivider } from "../components";
 
-import { BsArrowRight } from 'react-icons/bs'
-import { Link } from 'react-router-dom'
+import { BsArrowRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
-import AdmitereIcon from '../assets/admitere-icon.svg'
-import BacalaureatIcon from '../assets/bacalaureat-icon.svg'
-import OlimpiadaIcon from '../assets/olimpiada-icon.svg'
+import AdmitereIcon from "../assets/admitere-icon.svg";
+import BacalaureatIcon from "../assets/bacalaureat-icon.svg";
+import OlimpiadaIcon from "../assets/olimpiada-icon.svg";
 
 function StartLearningPage() {
   return (
-    <div className='bg-white font-poppins'>
-      <div className='bg-gradient-to-br from-[#102a4a] to-[#342a84] mb-16'>
+    <div className="bg-white font-poppins">
+      <div className="bg-gradient-to-br from-[#102a4a] to-[#342a84] mb-16">
         <Navbar />
         <PageDivider />
       </div>
 
-      <div className='mb-20'>
-        <div className='container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700 '>
-
+      <div className="mb-20">
+        <div className="container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700 ">
           <div className="grid md:grid-cols-3 gap-14 md:gap-5 mt-32">
-            <div data-aos="fade-up" className="bg-white p-6 text-center rounded-xl shadow-xl hover:shadow-2xl hover:shadow-orange-100">
+            <div
+              data-aos="fade-up"
+              className="bg-white p-6 text-center rounded-xl shadow-xl hover:shadow-2xl hover:shadow-orange-100"
+            >
               <div className="bg-orange-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
-                <img src={AdmitereIcon} alt="" className='w-8 h-8' />
+                <img src={AdmitereIcon} alt="" className="w-8 h-8" />
                 {/* <img src={AdmitereIcon} alt="" className='w-12 h-12'/> */}
               </div>
-              <h1 className="font-medium text-xl mb-3 lg:px-14 text-darken">Admitere</h1>
+              <h1 className="font-medium text-xl mb-3 lg:px-14 text-darken">
+                Admitere
+              </h1>
               <p className="px-4 text-gray-500 mb-10">
-                Indiferent de nivelul tău de pregătire, vei găsi materiale utile care să te ajute să te pregătești și să-ți maximizezi șansele de a obține un loc la o facultate de informatică               </p>
+                Indiferent de nivelul tău de pregătire, vei găsi materiale utile
+                care să te ajute să te pregătești și să-ți maximizezi șansele de
+                a obține un loc la o facultate de informatică{" "}
+              </p>
               {/* Features */}
-              <div className='text-gray-600 flex justify-center items-center'>
+              <div className="text-gray-600 flex justify-center items-center">
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <div className="mr-2">
@@ -134,24 +139,39 @@ function StartLearningPage() {
                   </li>
                 </ul>
               </div>
-              <Link to={"/codewiki/admitere"} className="font-quicksand mx-auto lg:mx-0 inline-flex font-bold px-8 py-3 mt-20 my-8 text-sm text-white transition bg-orange-500 hover:bg-orange-600 rounded hover:scale-110 hover:shadow-xl active:bg-indigo-500 focus:outline-none focus:ring" href="#">
+              <Link
+                to={"/codewiki/admitere"}
+                className="font-quicksand mx-auto lg:mx-0 inline-flex font-bold px-8 py-3 mt-20 my-8 text-sm text-white transition bg-orange-500 hover:bg-orange-600 rounded hover:scale-110 hover:shadow-xl active:bg-indigo-500 focus:outline-none focus:ring"
+                href="#"
+              >
                 Incepe aici
-                <BsArrowRight className='w-5 h-5 ml-2' />
+                <BsArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
 
-            <div data-aos="fade-up" data-aos-delay="150" className="bg-white shadow-xl p-6 text-center rounded-xl hover:shadow-2xl hover:shadow-orange-100">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="150"
+              className="bg-white shadow-xl p-6 text-center rounded-xl hover:shadow-2xl hover:shadow-orange-100"
+            >
               <div className="bg-orange-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
-                <img src={BacalaureatIcon} alt="" className=' w-8 h-8 mt-[3px] text-white' />
+                <img
+                  src={BacalaureatIcon}
+                  alt=""
+                  className=" w-8 h-8 mt-[3px] text-white"
+                />
               </div>
               <h1 className="font-medium text-xl mb-3 lg:px-14 text-darken">
                 Bacalaureat
               </h1>
               <p className="px-4 text-gray-500 mb-10">
-                Poți beneficia de ghiduri studiu, subiecte din anii trecuți rezolvate complet, cu explicații detaliate și feedback personalizat la propriile soluții              </p>
+                Poți beneficia de ghiduri studiu, subiecte din anii trecuți
+                rezolvate complet, cu explicații detaliate și feedback
+                personalizat la propriile soluții{" "}
+              </p>
 
               {/* Features */}
-              <div className='text-gray-600 flex justify-center items-center'>
+              <div className="text-gray-600 flex justify-center items-center">
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <div className="mr-2">
@@ -201,7 +221,9 @@ function StartLearningPage() {
                         />
                       </svg>
                     </div>
-                    <p className="font-medium">Imbunatatirea performantelor scolare</p>
+                    <p className="font-medium">
+                      Imbunatatirea performantelor scolare
+                    </p>
                   </li>
                   <li className="flex items-center">
                     <div className="mr-2">
@@ -225,7 +247,10 @@ function StartLearningPage() {
                         />
                       </svg>
                     </div>
-                    <p className="font-medium"> Gestionarea eficienta a timpului </p>
+                    <p className="font-medium">
+                      {" "}
+                      Gestionarea eficienta a timpului{" "}
+                    </p>
                   </li>
                   <li className="flex items-center">
                     <div className="mr-2">
@@ -253,23 +278,34 @@ function StartLearningPage() {
                   </li>
                 </ul>
               </div>
-              <Link to={"/codewiki/bacalaureat"} className="font-quicksand mx-auto lg:mx-0 inline-flex font-bold px-8 py-3 mt-20 my-8 text-sm text-white transition bg-orange-500 hover:bg-orange-600 rounded hover:scale-110 hover:shadow-xl active:bg-indigo-500 focus:outline-none focus:ring" href="#">
+              <Link
+                to={"/codewiki/bacalaureat"}
+                className="font-quicksand mx-auto lg:mx-0 inline-flex font-bold px-8 py-3 mt-20 my-8 text-sm text-white transition bg-orange-500 hover:bg-orange-600 rounded hover:scale-110 hover:shadow-xl active:bg-indigo-500 focus:outline-none focus:ring"
+                href="#"
+              >
                 Incepe aici
-                <BsArrowRight className='w-5 h-5 ml-2' />
+                <BsArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
 
-            <div data-aos="fade-up" data-aos-delay="300" className="bg-white shadow-xl p-6 text-center rounded-xl hover:shadow-2xl hover:shadow-orange-100">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="300"
+              className="bg-white shadow-xl p-6 text-center rounded-xl hover:shadow-2xl hover:shadow-orange-100"
+            >
               <div className="bg-orange-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
-                <img src={OlimpiadaIcon} alt="" className='w-10 mt-[2px]' />
+                <img src={OlimpiadaIcon} alt="" className="w-10 mt-[2px]" />
               </div>
               <h1 className="font-medium text-xl mb-2 lg:px-14 text-darken">
                 Olimpiada
               </h1>
               <p className="px-4 text-gray-500 mb-10">
-               asdfasdfasdf Oferim o varietate de materiale de învățare, astfel încât să poți învăța în ritmul tău ca să te poți simți pregătit pentru a excela la competițiile de programare              </p>
+                Oferim o varietate de materiale de învățare, astfel încât să
+                poți învăța în ritmul tău ca să te poți simți pregătit pentru a
+                excela la competițiile de programare{" "}
+              </p>
               {/* Features */}
-              <div className='text-gray-600 flex justify-center items-center'>
+              <div className="text-gray-600 flex justify-center items-center">
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <div className="mr-2">
@@ -319,7 +355,9 @@ function StartLearningPage() {
                         />
                       </svg>
                     </div>
-                    <p className="font-medium">Algoritmi si structuri de date complexe</p>
+                    <p className="font-medium">
+                      Algoritmi si structuri de date complexe
+                    </p>
                   </li>
                   <li className="flex items-center">
                     <div className="mr-2">
@@ -343,7 +381,9 @@ function StartLearningPage() {
                         />
                       </svg>
                     </div>
-                    <p className="font-medium">Gandire critica si rationament logic</p>
+                    <p className="font-medium">
+                      Gandire critica si rationament logic
+                    </p>
                   </li>
                   <li className="flex items-center">
                     <div className="mr-2">
@@ -367,15 +407,20 @@ function StartLearningPage() {
                         />
                       </svg>
                     </div>
-                    <p className="font-medium">Utilizarea abilitatilor matematica</p>
+                    <p className="font-medium">
+                      Utilizarea abilitatilor matematica
+                    </p>
                   </li>
                 </ul>
               </div>
-              <Link to={"/codewiki/olimpiada"} className="font-quicksand mx-auto lg:mx-0 inline-flex font-bold px-8 py-3 mt-20 my-8 text-sm text-white transition bg-orange-500 hover:bg-orange-600 rounded hover:scale-110 hover:shadow-xl active:bg-indigo-500 focus:outline-none focus:ring" href="#">
+              <Link
+                to={"/codewiki/olimpiada"}
+                className="font-quicksand mx-auto lg:mx-0 inline-flex font-bold px-8 py-3 mt-20 my-8 text-sm text-white transition bg-orange-500 hover:bg-orange-600 rounded hover:scale-110 hover:shadow-xl active:bg-indigo-500 focus:outline-none focus:ring"
+                href="#"
+              >
                 Incepe aici
-                <BsArrowRight className='w-5 h-5 ml-2' />
+                <BsArrowRight className="w-5 h-5 ml-2" />
               </Link>
-
             </div>
           </div>
         </div>
@@ -383,7 +428,7 @@ function StartLearningPage() {
 
       <Footer />
     </div>
-  )
+  );
 }
 
-export default StartLearningPage
+export default StartLearningPage;

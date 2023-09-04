@@ -1,25 +1,18 @@
-import React from 'react'
+import React from "react";
 
-import Navbar from '../components/Navbar'
-import Articles from '../components/Articles'
-import Footer from '../components/Footer'
-import PageDivider from '../components/PageDivider'
-import Admitere from '../components/Admitere'
-
-import TableOfContents from "react-table-of-contents"
+import { Navbar, Footer, PageDivider, Admitere } from "../components";
 
 function AdmiterePage() {
-  // TODO: link-uri catre articole
   return (
-    <div className='bg-white font-poppins'>
-      <div className='bg-gradient-to-br from-[#102a4a] to-[#342a84] mb-16'>
+    <div className="bg-white font-poppins">
+      <div className="bg-gradient-to-br from-[#102a4a] to-[#342a84] mb-16">
         <Navbar />
         <PageDivider />
       </div>
       <Admitere />
       <Footer />
     </div>
-  )
+  );
 }
 
-export default AdmiterePage
+export default AdmiterePage;
