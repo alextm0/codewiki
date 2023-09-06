@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/codewiki/static/css/main.116e3fb1.css",
-    "main.js": "/codewiki/static/js/main.812136a5.js",
+    "main.css": "/codewiki/static/css/main.eb779b93.css",
+    "main.js": "/codewiki/static/js/main.1873a0a6.js",
     "static/media/hero_img_5.svg": "/codewiki/static/media/hero_img_5.9e22993d6356d01a27833a8e6638664f.svg",
     "static/media/fa-solid-900.ttf": "/codewiki/static/media/fa-solid-900.422cfe2813b03d900c10.ttf",
     "static/media/fa-brands-400.ttf": "/codewiki/static/media/fa-brands-400.aff1938a5c48584fa92b.ttf",
@@ -58,12 +58,9 @@
     "static/media/KaTeX_Size2-Regular.ttf": "/codewiki/static/media/KaTeX_Size2-Regular.d1e8ff17527d88576404.ttf",
     "static/media/KaTeX_Script-Regular.woff2": "/codewiki/static/media/KaTeX_Script-Regular.a1c15978d325f10dcb49.woff2",
     "static/media/KaTeX_Caligraphic-Bold.woff": "/codewiki/static/media/KaTeX_Caligraphic-Bold.7ce7636b90003f983253.woff",
-    "static/media/img2.png": "/codewiki/static/media/img2.331f7b13ae96aeff836e.png",
     "static/media/KaTeX_Caligraphic-Regular.woff": "/codewiki/static/media/KaTeX_Caligraphic-Regular.4a559f36cc9a9ff50a2a.woff",
-    "static/media/img0.png": "/codewiki/static/media/img0.466109129a344cd7604d.png",
     "static/media/KaTeX_Size4-Regular.ttf": "/codewiki/static/media/KaTeX_Size4-Regular.1d1325964eb3838aa308.ttf",
     "static/media/KaTeX_Caligraphic-Bold.woff2": "/codewiki/static/media/KaTeX_Caligraphic-Bold.f046a374a80bb69ba397.woff2",
-    "static/media/img1.png": "/codewiki/static/media/img1.fa977d65252145a804e4.png",
     "static/media/KaTeX_Caligraphic-Regular.woff2": "/codewiki/static/media/KaTeX_Caligraphic-Regular.4519ba4c9ee4f9b68950.woff2",
     "static/media/fa-v4compatibility.ttf": "/codewiki/static/media/fa-v4compatibility.ea8535110e0c42fd0046.ttf",
     "static/media/KaTeX_Size3-Regular.ttf": "/codewiki/static/media/KaTeX_Size3-Regular.5d632274432b02a0edeb.ttf",
@@ -76,15 +73,15 @@
     "static/media/fa-v4compatibility.woff2": "/codewiki/static/media/fa-v4compatibility.2ec4574b00d1d21ed0a3.woff2",
     "static/media/olimpiada-icon.svg": "/codewiki/static/media/olimpiada-icon.95d857c211bce6985c8a040049b28c25.svg",
     "static/media/KaTeX_Size3-Regular.woff": "/codewiki/static/media/KaTeX_Size3-Regular.f32a9fde642521722ca1.woff",
+    "index.html": "/codewiki/index.html",
     "static/media/KaTeX_Size3-Regular.woff2": "/codewiki/static/media/KaTeX_Size3-Regular.1ef7adae735724bab211.woff2",
     "static/media/admitere-icon.svg": "/codewiki/static/media/admitere-icon.a7fd26f9732124a20caa348568f19e10.svg",
-    "index.html": "/codewiki/index.html",
     "static/media/bacalaureat-icon.svg": "/codewiki/static/media/bacalaureat-icon.5dab082b5fbf08baf43bfea266868f71.svg",
-    "main.116e3fb1.css.map": "/codewiki/static/css/main.116e3fb1.css.map",
-    "main.812136a5.js.map": "/codewiki/static/js/main.812136a5.js.map"
+    "main.eb779b93.css.map": "/codewiki/static/css/main.eb779b93.css.map",
+    "main.1873a0a6.js.map": "/codewiki/static/js/main.1873a0a6.js.map"
   },
   "entrypoints": [
-    "static/css/main.116e3fb1.css",
-    "static/js/main.812136a5.js"
+    "static/css/main.eb779b93.css",
+    "static/js/main.1873a0a6.js"
   ]
 }
