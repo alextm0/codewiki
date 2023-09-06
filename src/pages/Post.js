@@ -28,6 +28,8 @@ function Post({ blogs }) {
 
   let blog = blogs && blogs.data.find((blog) => blog.attributes.slug === slug);
 
+  console.log("post", blog);
+
   return (
     <div className="bg-white">
       {/* NAVBAR */}
@@ -86,7 +88,6 @@ function Post({ blogs }) {
                 },
               }}
             />
-            <img src="../assets/post.png" alt="HELLOO" />
           </div>
         </div>
         {/* TABLE OF CONTENTS - DESKTOP */}

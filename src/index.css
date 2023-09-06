@@ -121,42 +121,42 @@ li > a:hover {
 
 /* Markdown Styles */
 /* Headers */
-h1 {
+.markdown h1 {
   font-size: 2rem;
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
-h2 {
+.markdown h2 {
   font-size: 1.5rem;
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
-h3 {
+.markdown h3 {
   font-size: 1.2rem;
   font-weight: bold;
   margin-top: 15px;
   margin-bottom: 8px;
 }
 
-h4 {
+.markdown h4 {
   font-size: 1rem;
   font-weight: bold;
   margin-top: 15px;
   margin-bottom: 8px;
 }
 
-h5 {
+.markdown h5 {
   font-size: 0.875rem;
   font-weight: bold;
   margin-top: 15px;
   margin-bottom: 8px;
 }
 
-h6 {
+.markdown h6 {
   font-size: 0.75rem;
   font-weight: bold;
   margin-top: 15px;
@@ -164,11 +164,27 @@ h6 {
 }
 
 /* Code */
-code {
+.markdown code {
   font-family: monospace;
   /* background-color: #f5f5f5; */
   padding: 2px 4px;
   border-radius: 3px;
+}
+
+.markdown blockquote {
+  margin: 0;
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.markdown blockquote::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #dadada;
+  border-radius: 2px / 4px;
 }
 
 /* .math-display {
@@ -181,11 +197,11 @@ code {
 } */
 
 /* Strong (bold) */
-strong {
+.markdown strong {
   font-weight: bold;
 }
 
 /* Underline */
-u {
+.markdown u {
   text-decoration: underline;
 }
