@@ -28,10 +28,8 @@ function Post({ blogs }) {
 
   let blog = blogs && blogs.data.find((blog) => blog.attributes.slug === slug);
 
-  console.log("post", blog);
-
   return (
-    <div className="bg-white">
+    <div className="bg-white font-nunito">
       {/* NAVBAR */}
       <div className="bg-gradient-to-br from-[#102a4a] to-[#342a84] mb-16 font-poppins">
         <Navbar />
@@ -45,17 +43,17 @@ function Post({ blogs }) {
 
           {/* TITLE AND AUTHORS */}
           <div>
-            <h1 className="text-gray-800 font-bold text-4xl w-full -mt-5 -mb-3">
+            <h1 className="text-gray-800 font-bold text-4xl w-full -mt-5 -mb-3 font-quicksand">
               {blog.attributes.title}
             </h1>
 
-            <h2 className="text-gray-600 font-medium text-lg mt-5 -mb-3">
+            <h2 className="text-gray-600 font-medium text-lg mt-5 -mb-3 font-quicksand">
               Authors: {blog.attributes.authors}
             </h2>
           </div>
 
           {/* PAGE DIVIDER */}
-          <div className="divider w-[95%]"></div>
+          <div className="divider w-[100%]"></div>
 
           {/* TABLE OF CONTENTS - MOBILE */}
           <div className="flex flex-col gap-5 md:hidden">Table of contents</div>
@@ -68,12 +66,15 @@ function Post({ blogs }) {
               remarkPlugins={[remarkMath]}
               rehypePlugins={[rehypeKatex, rehypeRaw]}
               className="markdown"
-              escapeHtml={false}
+              escapeHtml={true}
               components={{
                 code({ node, inline, className, children, ...props }) {
                   const match = /language-(\w+)/.exec(className || "");
                   return !inline && match ? (
                     <SyntaxHighlighter
+                      codeTagProps={{
+                        style: { fontSize: "16px", lineHeight: "1.4" },
+                      }}
                       children={String(children).replace(/\n$/, "")}
                       style={vscDarkPlus} // theme
                       language={match[1]}
