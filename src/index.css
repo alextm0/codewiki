@@ -180,6 +180,7 @@ code {
 .markdown code {
   font-family: monospace;
   padding: 2px 4px;
+  /* font-weight: 300; */
   /* padding: 0.2rem 0.3rem; */
   border-radius: 3px;
 }
