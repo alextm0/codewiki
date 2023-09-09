@@ -24,6 +24,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 12px;
@@ -126,6 +130,8 @@ li > a:hover {
   font-size: 18px;
 }
 
+
+
 .markdown h1 {
   font-size: 2rem;
   font-weight: bold;
@@ -180,6 +186,7 @@ code {
 .markdown code {
   font-family: monospace;
   padding: 2px 4px;
+  /* white-space: pre; */
   /* font-weight: 300; */
   /* padding: 0.2rem 0.3rem; */
   border-radius: 3px;
@@ -229,7 +236,6 @@ code {
   /* display: inline-block;
   width: 49%; */
 }
-
 
 /* .math-display {
 	background-color: #1D1F21;
@@ -292,4 +298,72 @@ code {
 
 .markdown a {
   color: rgb(104 117 245 / var(--tw-bg-opacity));
+}
+
+.toc-navigation {
+  /* background-color: red; */
+  width: 16rem;
+  min-width: 16rem;
+  padding-left: auto;
+  padding-top: 16px;
+  /* margin: 8px; */
+  align-self: flex-start;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 48px;
+  max-height: calc(100vh - 70px);
+  overflow: auto;
+}
+
+.toc {
+  /* padding-left: 1.5rem; */
+  /* color: red; */
+  /* color: hsla(0,0%,100%,.6); */
+}
+
+.toc li {
+  /* list-style-type: disc;
+  color: #2d3748; */
+}
+
+.toc ul {
+  padding-left: 1.5rem;
+  /* list-style-type: disc; */
+}
+
+.toc > li {
+  padding-top: 20px;
+}
+
+.toc > li:nth-child(1) {
+  padding-top: 0px;
+}
+
+
+.toc > li,
+.toc > ul > li,
+.toc > ul > ul > li,
+.toc > ul > ul > ul > li,
+.toc > ul > ul > ul > ul > li,
+.toc > ul > ul > ul > ul > ul > li {
+  /* padding-bottom: 10px; */
+}
+
+.toc > li > a,
+.toc > ul > li > a,
+.toc > ul > ul > li > a,
+.toc > ul > ul > ul > li > a,
+.toc > ul > ul > ul > ul > li > a,
+.toc > ul > ul > ul > ul > ul > li > a {
+    color: #565656;
+  text-decoration: none;
+}
+
+.toc > li > a:hover,
+.toc > ul > li > a:hover,
+.toc > ul > ul > li > a:hover,
+.toc > ul > ul > ul > li > a:hover,
+.toc > ul > ul > ul > ul > li > a:hover,
+.toc > ul > ul > ul > ul > ul > li > a:hover {
+  color: #7B74FF;
 }

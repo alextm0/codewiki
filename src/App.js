@@ -40,8 +40,6 @@ export default function App() {
   if (error) return <p> Error! </p>;
   if (!data && !storedData) return null;
 
-  console.log("stored", storedData);
-
   return (
     <Routes>
       <Route
