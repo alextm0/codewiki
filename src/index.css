@@ -367,3 +367,23 @@ code {
 .toc > ul > ul > ul > ul > ul > li > a:hover {
   color: #7B74FF;
 }
+
+.circle-progress {
+  position: fixed;
+  bottom: 20px; /* Adjust the bottom distance as needed */
+  right: 20px; /* Adjust the right distance as needed */
+  background-color: #007BFF; /* Background color for the div */
+  color: #fff; /* Text color for the percentage */
+  border-radius: 50%; /* Create a circular shape */
+  padding: 10px; /* Add padding for better visibility */
+  width: 60px; /* Adjust the width as needed */
+  height: 60px; /* Adjust the height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.radial-progress.show {
+  opacity: 1; /* Show the div with fade-in animation */
+}

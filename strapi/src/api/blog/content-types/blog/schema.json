@@ -35,6 +35,12 @@
     },
     "slug": {
       "type": "string"
+    },
+    "resource": {
+      "type": "json"
+    },
+    "problemSet": {
+      "type": "json"
     }
   }
 }

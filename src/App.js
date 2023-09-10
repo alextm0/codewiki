@@ -11,6 +11,7 @@ import BacalaureatPage from "./pages/BacalaureatPage";
 import OlimpiadaPage from "./pages/OlimpiadaPage";
 import Post from "./pages/Post";
 import StartLearningPage from "./pages/StartLearningPage.js";
+import ProblemSetPage from "./pages/ProblemSetPage";
 import ErrorPage from "./pages/ErrorPage.js";
 
 import useFetch from "./hooks/useFetch";
@@ -63,6 +64,10 @@ export default function App() {
       <Route path="/codewiki/signup" element={<ErrorPage />} />
       <Route path="/codewiki/login" element={<ErrorPage />} />
       <Route path="*" element={<ErrorPage />} />
+
+      <Route path="/codewiki/bacalaureat/:slug" element={<ProblemSetPage />} />
+      <Route path="/codewiki/admitere/:slug" element={<ProblemSetPage />} />
+      <Route path="/codewiki/olimpiada/:slug" element={<ProblemSetPage />} />
 
       {/* ARTICLES */}
       <Route

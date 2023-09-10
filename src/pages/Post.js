@@ -22,6 +22,8 @@ import "katex/dist/katex.min.css";
 import rehypeRaw from "rehype-raw";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const flatten = (text, child) => {
   return typeof child === "string"
@@ -41,6 +43,37 @@ export const HeadingRenderer = (props) => {
 };
 
 function Post({ blogs }) {
+  const [readPercentage, setReadPercentage] = useState(0);
+  const [showRadialProgress, setShowRadialProgress] = useState(false);
+
+  // Calculate and update read percentage as the user scrolls
+  useEffect(() => {
+    function handleScroll() {
+      const windowHeight = window.innerHeight;
+      const fullHeight = document.documentElement.scrollHeight;
+      const scrolled = window.scrollY;
+
+      const calculatedPercentage =
+        (scrolled / (fullHeight - windowHeight)) * 100;
+      setReadPercentage(calculatedPercentage);
+
+      // Show the radial-progress div when scrolled to a certain percentage
+      if (calculatedPercentage >= 10) {
+        setShowRadialProgress(true);
+      } else {
+        setShowRadialProgress(false);
+      }
+    }
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Remove scroll event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const { slug } = useParams();
 
   let blog = blogs && blogs.data.find((blog) => blog.attributes.slug === slug);
@@ -73,8 +106,38 @@ function Post({ blogs }) {
           {/* PAGE DIVIDER */}
           <div className="divider w-[100%]"></div>
 
+          <div className="text-[18px] md:hidden">
+            <div className="text-blue-800 font-bold mb-5">
+              {" "}
+              Recent articles{" "}
+            </div>
+            <div className="flex flex-col">
+              {blogs.data.map((blog) => {
+                if (blog.attributes.slug != slug)
+                  return (
+                    <a
+                      className="text-[#565656] hover:text-blue-600 "
+                      href={`http://localhost:3000/codewiki/blog/${blog.attributes.slug}`}
+                    >
+                      {blog.attributes.title}
+                    </a>
+                  );
+              })}
+            </div>
+          </div>
+
           {/* TABLE OF CONTENTS - MOBILE */}
-          <div className="flex flex-col gap-5 md:hidden">Table of contents</div>
+          <div className="md:hidden text-[18px]">
+            <div className="toc-container flex flex-col gap-5">
+              <div className="text-blue-800 font-bold">Table of contents</div>
+              <Toc
+                markdownText={blog.attributes.blogContent}
+                highestHeadingLevel={1}
+                lowestHeadingLevel={2}
+                className="toc"
+              />
+            </div>
+          </div>
 
           {/* BLOG CONTENT */}
           <div className="content-container max-w-[1024px] text-gray-700">
@@ -111,6 +174,16 @@ function Post({ blogs }) {
               }}
             />
           </div>
+
+          {blog.attributes.resource && (
+            <ResourcesTable
+              header={"Materiale de studiu"}
+              resource={blog.attributes.resource}
+            />
+          )}
+          {blog.attributes.problemSet && (
+            <ProblemSetTable problemSet={blog.attributes.problemSet} />
+          )}
         </div>
         {/* TABLE OF CONTENTS - DESKTOP */}
         <div>
@@ -136,7 +209,34 @@ function Post({ blogs }) {
           <div className="toc-navigation">
             <div className="toc-container hidden md:flex md:flex-col gap-5 md:mt-20">
               <div className="text-blue-800 font-bold">Table of contents</div>
-
+              {/* Progress bar */}
+              <div
+                className={`fixed bottom-0 right-0 p-4 ${
+                  showRadialProgress ? "block" : "hidden"
+                }`}
+                style={{ zIndex: 9999 }}
+              >
+                <div className="relative h-16 w-16">
+                  <svg
+                    className="absolute top-0 left-0 h-full w-full transform -rotate-90"
+                    viewBox="0 0 16 16"
+                  >
+                    <circle
+                      className="text-orange-500 stroke-current transition-transform duration-500 ease-in-out"
+                      cx="8"
+                      cy="8"
+                      r="7"
+                      strokeWidth="2"
+                      fill="none"
+                      strokeDasharray="43"
+                      strokeDashoffset={43 - (readPercentage / 100) * 43}
+                    ></circle>
+                  </svg>
+                  <span className="absolute inset-0 flex items-center justify-center text-gray-700 font-bold text-xs">
+                    {Math.round(readPercentage)}%
+                  </span>
+                </div>
+              </div>
               <Toc
                 markdownText={blog.attributes.blogContent}
                 highestHeadingLevel={1}
